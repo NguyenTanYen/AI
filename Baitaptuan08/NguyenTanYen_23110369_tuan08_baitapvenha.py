@@ -482,3 +482,6 @@ class PuzzleGUI:
             pygame.display.flip()
             self.root.update()
 
+if __name__ == "__main__":
+    gui = PuzzleGUI()
+    gui.run()
