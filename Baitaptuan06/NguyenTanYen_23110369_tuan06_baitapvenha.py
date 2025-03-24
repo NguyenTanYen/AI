@@ -89,7 +89,3 @@ class Puzzle8Solver:
             self.result_text.config(text="Không tìm thấy lời giải!")
             messagebox.showwarning("Lỗi", "Không tìm thấy lời giải")
     
-if __name__ == "__main__":
-    root = tk.Tk()
-    app = Puzzle8Solver(root)
-    root.mainloop()
