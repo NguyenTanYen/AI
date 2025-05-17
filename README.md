@@ -647,11 +647,12 @@ Các thuật toán này không phù hợp trực tiếp với 8-Puzzle cổ đi�
 
       Q(s, a) <- Q(s, a) + α * [ r + γ * max_a' Q(s', a') - Q(s, a) ]
 
-  Trong đó:  
-  - \(\alpha\): tốc độ học  
-  - \(\gamma\): hệ số chiết khấu  
-  - \(r\): phần thưởng nhận được  
-  - \(s'\): trạng thái mới sau hành động \(a\) từ trạng thái \(s\)
+Trong đó:
+      - Q(s, a): giá trị hiện tại của hành động a ở trạng thái s
+      - α (alpha): tốc độ học
+      - r: phần thưởng nhận được sau khi thực hiện hành động a
+      - γ (gamma): hệ số chiết khấu
+      - max_a' Q(s', a'): giá trị tối đa của các hành động khả thi ở trạng thái kế tiếp s'
 
 - **Áp dụng:**  
   - Trạng thái: cấu hình bàn cờ (mã hóa dạng tuple hoặc index).  
@@ -666,7 +667,7 @@ Các thuật toán này không phù hợp trực tiếp với 8-Puzzle cổ đi�
      - Cập nhật giá trị Q theo công thức trên.  
   3. Lặp lại cho đến khi chính sách hội tụ.
 
-- **Độ phức tạp:** Phụ thuộc vào số trạng thái và số hành động \((|S| \times |A|)\).
+- **Độ phức tạp:** Phụ thuộc vào số trạng thái và số hành động (|S| × |A|).
 
 - **Ưu điểm:** Không cần biết trước mô hình môi trường.
 
