@@ -64,8 +64,7 @@ Dự án bao gồm việc triển khai và trình bày toàn diện bài toán 8
 
 ### 2.1. Bài toán 8-Puzzle
 
-- **Mô tả**:  
-  Bàn cờ gồm 9 ô, trong đó có 8 ô chứa số từ 1 đến 8 và 1 ô trống. Mục tiêu là sắp xếp các ô số theo thứ tự từ 1 đến 8, sao cho ô trống nằm ở vị trí cuối cùng, tạo thành trạng thái mục tiêu.
+- **Mô tả**: Bàn cờ gồm 9 ô, trong đó có 8 ô chứa số từ 1 đến 8 và 1 ô trống. Mục tiêu là sắp xếp các ô số theo thứ tự từ 1 đến 8, sao cho ô trống nằm ở vị trí cuối cùng, tạo thành trạng thái mục tiêu.
 
 - **Thành phần bài toán**:  
   - **Trạng thái**: Cấu hình các ô số và ô trống trên bàn cờ tại thời điểm hiện tại.  
@@ -75,23 +74,17 @@ Dự án bao gồm việc triển khai và trình bày toàn diện bài toán 8
 
 ### 2.2. Nhóm thuật toán triển khai
 
-- **Tìm kiếm không thông tin (Uninformed Search)**:  
-  Bao gồm các thuật toán như BFS (Breadth-First Search), DFS (Depth-First Search), UCS (Uniform Cost Search), và IDS (Iterative Deepening Search). Đây là những thuật toán duyệt trạng thái mà không sử dụng thông tin heuristic, thích hợp cho bài toán có kích thước nhỏ, đảm bảo tính đầy đủ và đôi khi đảm bảo tối ưu.
+- **Tìm kiếm không thông tin (Uninformed Search)**: Bao gồm các thuật toán như BFS (Breadth-First Search), DFS (Depth-First Search), UCS (Uniform Cost Search), và IDS (Iterative Deepening Search). Đây là những thuật toán duyệt trạng thái mà không sử dụng thông tin heuristic, thích hợp cho bài toán có kích thước nhỏ, đảm bảo tính đầy đủ và đôi khi đảm bảo tối ưu.
 
-- **Tìm kiếm có thông tin (Informed Search)**:  
-  Bao gồm Greedy Best-First Search, A* và IDA* — các thuật toán tận dụng hàm heuristic để tăng tốc độ tìm kiếm và nâng cao chất lượng lời giải, giảm đáng kể không gian trạng thái cần duyệt.
+- **Tìm kiếm có thông tin (Informed Search)**: Bao gồm Greedy Best-First Search, A* và IDA* — các thuật toán tận dụng hàm heuristic để tăng tốc độ tìm kiếm và nâng cao chất lượng lời giải, giảm đáng kể không gian trạng thái cần duyệt.
 
-- **Tìm kiếm cục bộ (Local Search)**:  
-  Bao gồm các phương pháp Hill Climbing (đơn giản, steepest-ascent, stochastic), Simulated Annealing, Genetic Search và Beam Search. Các thuật toán này ưu tiên cải thiện trạng thái hiện tại theo hướng tối ưu cục bộ, phù hợp với không gian trạng thái lớn và yêu cầu lời giải gần đúng.
+- **Tìm kiếm cục bộ (Local Search)**: Bao gồm các phương pháp Hill Climbing (đơn giản, steepest-ascent, stochastic), Simulated Annealing, Genetic Search và Beam Search. Các thuật toán này ưu tiên cải thiện trạng thái hiện tại theo hướng tối ưu cục bộ, phù hợp với không gian trạng thái lớn và yêu cầu lời giải gần đúng.
 
-- **Tìm kiếm trong môi trường phức tạp (Complex Environment Search)**:  
-  Triển khai các thuật toán xử lý môi trường không chắc chắn như AND-OR Search, Partially Observable Search và No Observation Search, giúp giải quyết bài toán trong điều kiện quan sát hạn chế hoặc hành động không chắc chắn.
+- **Tìm kiếm trong môi trường phức tạp (Complex Environment Search)**: Triển khai các thuật toán xử lý môi trường không chắc chắn như AND-OR Search, Partially Observable Search và No Observation Search, giúp giải quyết bài toán trong điều kiện quan sát hạn chế hoặc hành động không chắc chắn.
 
-- **Tìm kiếm có điều kiện ràng buộc (Constraint Satisfaction Problem - CSP)**:  
-  Bao gồm Constraint Testing, Backtracking CSP và Backtracking AC-3. Các thuật toán này tập trung xử lý các ràng buộc phức tạp trong bài toán, giúp thu hẹp không gian tìm kiếm hiệu quả, đồng thời kiểm tra tính hợp lệ của các trạng thái.
+- **Tìm kiếm có điều kiện ràng buộc (Constraint Satisfaction Problem - CSP)**: Bao gồm Constraint Testing, Backtracking CSP và Backtracking AC-3. Các thuật toán này tập trung xử lý các ràng buộc phức tạp trong bài toán, giúp thu hẹp không gian tìm kiếm hiệu quả, đồng thời kiểm tra tính hợp lệ của các trạng thái.
 
-- **Học tăng cường (Reinforcement Learning)**:  
-  Ứng dụng thuật toán Q-Learning để học từ kinh nghiệm và tối ưu chính sách giải quyết bài toán mà không cần mô hình môi trường chính xác.
+- **Học tăng cường (Reinforcement Learning)**: Ứng dụng thuật toán Q-Learning để học từ kinh nghiệm và tối ưu chính sách giải quyết bài toán mà không cần mô hình môi trường chính xác.
 
 ### 2.3. Bảng tổng quan nhóm thuật toán
 
@@ -116,27 +109,20 @@ Dự án bao gồm việc triển khai và trình bày toàn diện bài toán 8
   - Tạo các hình ảnh động thể hiện quá trình giải bài toán 8-Puzzle theo từng thuật toán khác nhau.  
   - Giúp người dùng dễ dàng so sánh và đánh giá trực quan cách thức vận hành cũng như hiệu quả của từng thuật toán.
  
-
 ---
 ## 3. CÁC THUẬT TOÁN SỬ DỤNG
 
 ### 3.1. Tìm kiếm không thông tin (Uninformed Search)
 
-**Định nghĩa lý thuyết:**  
-Tìm kiếm không thông tin (Uninformed Search) là các chiến lược tìm kiếm mà không có kiến thức bổ sung nào về không gian trạng thái ngoài thông tin được cung cấp trong định nghĩa bài toán. Các thuật toán này không sử dụng bất kỳ hàm heuristic nào để định hướng quá trình tìm kiếm mà chỉ dựa vào cấu trúc cây trạng thái và các quy tắc sinh trạng thái kế tiếp.
+**Định nghĩa lý thuyết:** Tìm kiếm không thông tin (Uninformed Search) là các chiến lược tìm kiếm mà không có kiến thức bổ sung nào về không gian trạng thái ngoài thông tin được cung cấp trong định nghĩa bài toán. Các thuật toán này không sử dụng bất kỳ hàm heuristic nào để định hướng quá trình tìm kiếm mà chỉ dựa vào cấu trúc cây trạng thái và các quy tắc sinh trạng thái kế tiếp.
 
-**Áp dụng vào bài 8-Puzzle:**  
-Trong bài toán 8-Puzzle, trạng thái là cách sắp xếp của các ô số, hành động là việc di chuyển ô trống lên/xuống/trái/phải. Các thuật toán tìm kiếm không thông tin như BFS, DFS, UCS, IDS có thể được sử dụng để tìm lời giải mà không cần biết trước trạng thái nào gần đích hơn, chỉ dựa vào việc duyệt toàn bộ không gian trạng thái một cách có hệ thống.
-
----
+**Áp dụng vào bài 8-Puzzle:** Trong bài toán 8-Puzzle, trạng thái là cách sắp xếp của các ô số, hành động là việc di chuyển ô trống lên/xuống/trái/phải. Các thuật toán tìm kiếm không thông tin như BFS, DFS, UCS, IDS có thể được sử dụng để tìm lời giải mà không cần biết trước trạng thái nào gần đích hơn, chỉ dựa vào việc duyệt toàn bộ không gian trạng thái một cách có hệ thống.
 
 #### 3.1.1. Breadth-First Search (BFS)
 
-- **Lý thuyết:**  
-  BFS là chiến lược tìm kiếm theo chiều rộng, mở rộng tất cả các nút ở độ sâu hiện tại trước khi đi sâu hơn.
+- **Lý thuyết:** BFS là chiến lược tìm kiếm theo chiều rộng, mở rộng tất cả các nút ở độ sâu hiện tại trước khi đi sâu hơn.
 
-- **Áp dụng vào 8-Puzzle:**  
-  BFS bảo đảm tìm ra lời giải tối ưu nếu chi phí các bước di chuyển là như nhau. Tuy nhiên, dễ gặp tình trạng sử dụng nhiều bộ nhớ.
+- **Áp dụng vào 8-Puzzle:** BFS bảo đảm tìm ra lời giải tối ưu nếu chi phí các bước di chuyển là như nhau. Tuy nhiên, dễ gặp tình trạng sử dụng nhiều bộ nhớ.
 
 - **Các bước thực hiện:**  
   1. Đưa trạng thái ban đầu vào hàng đợi.  
@@ -144,30 +130,21 @@ Trong bài toán 8-Puzzle, trạng thái là cách sắp xếp của các ô s�
   3. Kiểm tra nếu là trạng thái đích thì trả về lời giải.  
   4. Tạo các trạng thái con và đưa vào hàng đợi nếu chưa được duyệt.
 
-- **Độ phức tạp:**  
-  O(b^d) với b là nhánh trung bình, d là độ sâu.
+- **Độ phức tạp:** O(b^d) với b là nhánh trung bình, d là độ sâu.
 
-- **Ưu điểm:**  
-  Tìm được lời giải ngắn nhất.
+- **Ưu điểm:**  Tìm được lời giải ngắn nhất.
 
-- **Nhược điểm:**  
-  Tốn bộ nhớ, chậm với không gian trạng thái lớn.
+- **Nhược điểm:** Tốn bộ nhớ, chậm với không gian trạng thái lớn.
 
-- **Link tham khảo:**  
-  [BFS - GeeksforGeeks](https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/)
+- **Link tham khảo:** [BFS - GeeksforGeeks](https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/)
 
-- **Nhận xét:**  
-  Hữu ích cho bài toán có chi phí đều, nhưng không hiệu quả với độ sâu lớn.
-
----
+- **Nhận xét:** Hữu ích cho bài toán có chi phí đều, nhưng không hiệu quả với độ sâu lớn.
 
 #### 3.1.2. Depth-First Search (DFS)
 
-- **Lý thuyết:**  
-  DFS là chiến lược mở rộng sâu nhất có thể trước khi quay lại.
+- **Lý thuyết:** DFS là chiến lược mở rộng sâu nhất có thể trước khi quay lại.
 
-- **Áp dụng:**  
-  DFS ít tốn bộ nhớ hơn BFS nhưng không đảm bảo lời giải ngắn nhất.
+- **Áp dụng:** DFS ít tốn bộ nhớ hơn BFS nhưng không đảm bảo lời giải ngắn nhất.
 
 - **Các bước:**  
   1. Đưa trạng thái đầu vào stack.  
@@ -175,30 +152,23 @@ Trong bài toán 8-Puzzle, trạng thái là cách sắp xếp của các ô s�
   3. Nếu là trạng thái đích, trả về lời giải.  
   4. Đưa các trạng thái con vào stack.
 
-- **Độ phức tạp:**  
-  O(b^m) với m là độ sâu tối đa.
+- **Độ phức tạp:** O(b^m) với m là độ sâu tối đa.
 
-- **Ưu điểm:**  
-  Ít tốn bộ nhớ.
+- **Ưu điểm:** Ít tốn bộ nhớ.
 
-- **Nhược điểm:**  
-  Dễ đi vào vòng lặp, không đảm bảo tối ưu.
+- **Nhược điểm:** Dễ đi vào vòng lặp, không đảm bảo tối ưu.
 
-- **Link:**  
-  [DFS - GeeksforGeeks](https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/)
+- **Link:** [DFS - GeeksforGeeks](https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/)
 
-- **Nhận xét:**  
-  Không phù hợp với bài toán có lời giải sâu hoặc vòng lặp nhiều.
+- **Nhận xét:** Không phù hợp với bài toán có lời giải sâu hoặc vòng lặp nhiều.
 
 ---
 
 #### 3.1.3. Uniform Cost Search (UCS)
 
-- **Lý thuyết:**  
-  Mở rộng nút theo chi phí nhỏ nhất từ gốc đến hiện tại.
+- **Lý thuyết:** Mở rộng nút theo chi phí nhỏ nhất từ gốc đến hiện tại.
 
-- **Áp dụng:**  
-  Tìm lời giải tối ưu, phù hợp với chi phí di chuyển khác nhau.
+- **Áp dụng:** Tìm lời giải tối ưu, phù hợp với chi phí di chuyển khác nhau.
 
 - **Các bước:**  
   1. Đưa trạng thái đầu vào hàng đợi ưu tiên.  
@@ -206,50 +176,38 @@ Trong bài toán 8-Puzzle, trạng thái là cách sắp xếp của các ô s�
   3. Kiểm tra nếu là đích, trả lời giải.  
   4. Thêm các trạng thái con vào hàng đợi với chi phí tương ứng.
 
-- **Độ phức tạp:**  
-  O(b^d)
+- **Độ phức tạp:** O(b^d)
 
-- **Ưu điểm:**  
-  Tối ưu.
+- **Ưu điểm:** Tối ưu.
 
-- **Nhược điểm:**  
-  Tốn bộ nhớ.
+- **Nhược điểm:** Tốn bộ nhớ.
 
-- **Link:**  
-  [UCS - Educative](https://www.educative.io/answers/what-is-uniform-cost-search)
+- **Link:** [UCS - Educative](https://www.educative.io/answers/what-is-uniform-cost-search)
 
-- **Nhận xét:**  
-  Lựa chọn tốt nếu chi phí không đều.
+- **Nhận xét:** Lựa chọn tốt nếu chi phí không đều.
 
 ---
 
 #### 3.1.4. Iterative Deepening Search (IDS)
 
-- **Lý thuyết:**  
-  Kết hợp BFS và DFS bằng cách tìm kiếm sâu dần từng mức.
+- **Lý thuyết:** Kết hợp BFS và DFS bằng cách tìm kiếm sâu dần từng mức.
 
-- **Áp dụng:**  
-  Tối ưu bộ nhớ và đảm bảo tìm lời giải tối ưu.
+- **Áp dụng:**  Tối ưu bộ nhớ và đảm bảo tìm lời giải tối ưu.
 
 - **Các bước:**  
   1. Chọn giới hạn độ sâu d.  
   2. Thực hiện DFS đến độ sâu d.  
   3. Tăng d và lặp lại nếu chưa tìm thấy lời giải.
 
-- **Độ phức tạp:**  
-  O(b^d), bộ nhớ O(bd).
+- **Độ phức tạp:**  O(b^d), bộ nhớ O(bd).
 
-- **Ưu điểm:**  
-  Giải quyết nhược điểm bộ nhớ của BFS.
+- **Ưu điểm:**  Giải quyết nhược điểm bộ nhớ của BFS.
 
-- **Nhược điểm:**  
-  Tốn thời gian do lặp lại nhiều DFS.
+- **Nhược điểm:** Tốn thời gian do lặp lại nhiều DFS.
 
-- **Link:**  
-  [IDS - GeeksforGeeks](https://www.geeksforgeeks.org/iterative-deepening-searchids-iterative-deepening-depth-first-searchiddfs/)
+- **Link:** [IDS - GeeksforGeeks](https://www.geeksforgeeks.org/iterative-deepening-searchids-iterative-deepening-depth-first-searchiddfs/)
 
-- **Nhận xét:**  
-  Phù hợp cho bài toán có không gian lớn và lời giải tối ưu.
+- **Nhận xét:** Phù hợp cho bài toán có không gian lớn và lời giải tối ưu.
 
 ---
 
@@ -264,13 +222,11 @@ Trong bài toán 8-Puzzle, trạng thái là cách sắp xếp của các ô s�
 
 ---
 
-**Kết luận:**  
-IDS là lựa chọn cân bằng giữa tối ưu và hiệu quả bộ nhớ cho bài toán 8-Puzzle nếu chi phí đều. Nếu chi phí khác nhau, UCS là thuật toán phù hợp nhất.
+**Kết luận:** IDS là lựa chọn cân bằng giữa tối ưu và hiệu quả bộ nhớ cho bài toán 8-Puzzle nếu chi phí đều. Nếu chi phí khác nhau, UCS là thuật toán phù hợp nhất.
 
 ### 3.2. Tìm kiếm có thông tin (Informed Search)
 
-**Định nghĩa lý thuyết:**  
-Tìm kiếm có thông tin (Informed Search) là các chiến lược sử dụng kiến thức bổ sung (thường là hàm heuristic) để đánh giá mức độ tiệm cận của trạng thái hiện tại đến trạng thái mục tiêu. Các thuật toán này có khả năng thu hẹp không gian tìm kiếm và tăng tốc độ tìm ra lời giải.
+**Định nghĩa lý thuyết:** Tìm kiếm có thông tin (Informed Search) là các chiến lược sử dụng kiến thức bổ sung (thường là hàm heuristic) để đánh giá mức độ tiệm cận của trạng thái hiện tại đến trạng thái mục tiêu. Các thuật toán này có khả năng thu hẹp không gian tìm kiếm và tăng tốc độ tìm ra lời giải.
 
 **Áp dụng vào bài 8-Puzzle:**  
 Trong bài toán 8-Puzzle, các heuristic thường được sử dụng bao gồm:  
@@ -283,11 +239,9 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 
 #### 3.2.1. Greedy Best-First Search
 
-- **Lý thuyết:**  
-  Luôn chọn mở rộng trạng thái có giá trị heuristic h(n) nhỏ nhất, tức là trạng thái được cho là gần mục tiêu nhất.
+- **Lý thuyết:** Luôn chọn mở rộng trạng thái có giá trị heuristic h(n) nhỏ nhất, tức là trạng thái được cho là gần mục tiêu nhất.
 
-- **Áp dụng:**  
-  Tập trung mạnh vào mục tiêu nhưng không đảm bảo lời giải tối ưu.
+- **Áp dụng:** Tập trung mạnh vào mục tiêu nhưng không đảm bảo lời giải tối ưu.
 
 - **Các bước:**  
   1. Đưa trạng thái đầu vào hàng đợi ưu tiên theo h(n).  
@@ -295,20 +249,15 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
   3. Kiểm tra trạng thái đích.  
   4. Sinh các trạng thái con và tính h(n), đưa vào hàng đợi.
 
-- **Độ phức tạp:**  
-  O(b^m)
+- **Độ phức tạp:** O(b^m)
 
-- **Ưu điểm:**  
-  Nhanh, đơn giản.
+- **Ưu điểm:**  Nhanh, đơn giản.
 
-- **Nhược điểm:**  
-  Dễ rơi vào ngõ cụt, không đảm bảo tối ưu.
+- **Nhược điểm:** Dễ rơi vào ngõ cụt, không đảm bảo tối ưu.
 
-- **Link tham khảo:**  
-  [Greedy Best-First Search](https://www.geeksforgeeks.org/greedy-best-first-search-algorithm/)
+- **Link tham khảo:** [Greedy Best-First Search](https://www.geeksforgeeks.org/greedy-best-first-search-algorithm/)
 
-- **Nhận xét:**  
-  Phù hợp khi thời gian quan trọng hơn độ chính xác lời giải.
+- **Nhận xét:** Phù hợp khi thời gian quan trọng hơn độ chính xác lời giải.
 
 ---
 
@@ -319,8 +268,7 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
   - g(n): chi phí từ trạng thái đầu đến n  
   - h(n): chi phí ước lượng từ n đến mục tiêu
 
-- **Áp dụng:**  
-  Tối ưu và hoàn chỉnh nếu h(n) không đánh giá quá cao (admissible).
+- **Áp dụng:** Tối ưu và hoàn chỉnh nếu h(n) không đánh giá quá cao (admissible).
 
 - **Các bước:**  
   1. Đưa trạng thái đầu vào hàng đợi ưu tiên theo f(n).  
@@ -328,50 +276,38 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
   3. Kiểm tra trạng thái đích.  
   4. Sinh trạng thái con, tính f(n) và đưa vào hàng đợi.
 
-- **Độ phức tạp:**  
-  O(b^d)
+- **Độ phức tạp:** O(b^d)
 
-- **Ưu điểm:**  
-  Tìm được lời giải ngắn nhất.
+- **Ưu điểm:** Tìm được lời giải ngắn nhất.
 
-- **Nhược điểm:**  
-  Có thể tốn nhiều bộ nhớ.
+- **Nhược điểm:** Có thể tốn nhiều bộ nhớ.
 
-- **Link tham khảo:**  
-  [A* Search Algorithm](https://www.geeksforgeeks.org/a-search-algorithm/)
+- **Link tham khảo:** [A* Search Algorithm](https://www.geeksforgeeks.org/a-search-algorithm/)
 
-- **Nhận xét:**  
-  Là một trong những thuật toán hiệu quả nhất cho 8-Puzzle.
+- **Nhận xét:** Là một trong những thuật toán hiệu quả nhất cho 8-Puzzle.
 
 ---
 
 #### 3.2.3. Iterative Deepening A (IDA)*
 
-- **Lý thuyết:**  
-  Là phiên bản của A* dùng tìm kiếm sâu dần theo giới hạn f(n).
+- **Lý thuyết:** Là phiên bản của A* dùng tìm kiếm sâu dần theo giới hạn f(n).
 
-- **Áp dụng:**  
-  Tiết kiệm bộ nhớ so với A*, nhưng vẫn tối ưu.
+- **Áp dụng:** Tiết kiệm bộ nhớ so với A*, nhưng vẫn tối ưu.
 
 - **Các bước:**  
   1. Thiết lập ngưỡng f(n) ban đầu.  
   2. Thực hiện tìm kiếm theo DFS có ràng buộc f(n).  
   3. Nếu không tìm thấy, tăng ngưỡng f(n) và lặp lại.
 
-- **Độ phức tạp:**  
-  O(b^d), bộ nhớ O(d)
+- **Độ phức tạp:** O(b^d), bộ nhớ O(d)
 
-- **Ưu điểm:**  
-  Tối ưu và tiết kiệm bộ nhớ.
+- **Ưu điểm:** Tối ưu và tiết kiệm bộ nhớ.
 
-- **Nhược điểm:**  
-  Chạy lại nhiều lần.
+- **Nhược điểm:** Chạy lại nhiều lần.
 
-- **Link tham khảo:**  
-  [Iterative Deepening A* - Wikipedia](https://en.wikipedia.org/wiki/Iterative_deepening_A*)
+- **Link tham khảo:** [Iterative Deepening A* - Wikipedia](https://en.wikipedia.org/wiki/Iterative_deepening_A*)
 
-- **Nhận xét:**  
-  Tốt cho bài toán lớn, khi không đủ bộ nhớ cho A*.
+- **Nhận xét:** Tốt cho bài toán lớn, khi không đủ bộ nhớ cho A*.
 
 ---
 
@@ -385,26 +321,19 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 
 ---
 
-**Kết luận:**  
-A* là thuật toán tốt nhất về độ chính xác và hiệu quả tổng thể trong bài toán 8-Puzzle. Nếu cần tiết kiệm bộ nhớ, nên dùng IDA*.
+**Kết luận:** A* là thuật toán tốt nhất về độ chính xác và hiệu quả tổng thể trong bài toán 8-Puzzle. Nếu cần tiết kiệm bộ nhớ, nên dùng IDA*.
 
 ### 3.3. Tìm kiếm cục bộ (Local Search)
 
-**Định nghĩa lý thuyết:**  
-Tìm kiếm cục bộ là chiến lược tìm kiếm cải tiến liên tục dựa trên trạng thái hiện tại, không mở rộng theo cây mà chỉ tập trung vào trạng thái lân cận. Nó đặc biệt phù hợp với các bài toán không cần lời giải đầy đủ mà chỉ cần tối ưu một trạng thái (như 8-Puzzle).
+**Định nghĩa lý thuyết:** Tìm kiếm cục bộ là chiến lược tìm kiếm cải tiến liên tục dựa trên trạng thái hiện tại, không mở rộng theo cây mà chỉ tập trung vào trạng thái lân cận. Nó đặc biệt phù hợp với các bài toán không cần lời giải đầy đủ mà chỉ cần tối ưu một trạng thái (như 8-Puzzle).
 
-**Áp dụng vào bài 8-Puzzle:**  
-Trong 8-Puzzle, mỗi bước ta xét các trạng thái lân cận bằng cách di chuyển ô trống, sau đó chọn trạng thái tốt nhất theo một tiêu chí đánh giá như heuristic. Các thuật toán như Hill Climbing, Simulated Annealing, Genetic Algorithm,... là đại diện cho hướng tiếp cận này.
-
----
+**Áp dụng vào bài 8-Puzzle:** Trong 8-Puzzle, mỗi bước ta xét các trạng thái lân cận bằng cách di chuyển ô trống, sau đó chọn trạng thái tốt nhất theo một tiêu chí đánh giá như heuristic. Các thuật toán như Hill Climbing, Simulated Annealing, Genetic Algorithm,... là đại diện cho hướng tiếp cận này.
 
 #### 3.3.1. Simple Hill Climbing
 
-- **Lý thuyết:**  
-  Luôn chọn trạng thái kế tiếp có giá trị đánh giá tốt hơn hiện tại.
+- **Lý thuyết:** Luôn chọn trạng thái kế tiếp có giá trị đánh giá tốt hơn hiện tại.
 
-- **Áp dụng:**  
-  Mỗi bước chọn trạng thái con có h(n) nhỏ hơn.
+- **Áp dụng:** Mỗi bước chọn trạng thái con có h(n) nhỏ hơn.
 
 - **Các bước:**  
   1. Khởi tạo trạng thái ban đầu.  
@@ -412,88 +341,62 @@ Trong 8-Puzzle, mỗi bước ta xét các trạng thái lân cận bằng cách
   3. Chọn trạng thái tốt hơn hiện tại (nếu có).  
   4. Nếu không có cải thiện, dừng lại.
 
-- **Độ phức tạp:**  
-  O(bm)
+- **Độ phức tạp:** O(bm)
 
-- **Ưu điểm:**  
-  Đơn giản, nhanh.
+- **Ưu điểm:**  Đơn giản, nhanh.
 
-- **Nhược điểm:**  
-  Mắc kẹt tại cực trị địa phương.
+- **Nhược điểm:**  Mắc kẹt tại cực trị địa phương.
 
-- **Link tham khảo:**  
-  [Simple Hill Climbing](https://www.javatpoint.com/ai-hill-climbing)
+- **Link tham khảo:** [Simple Hill Climbing](https://www.javatpoint.com/ai-hill-climbing)
 
-- **Nhận xét:**  
-  Không thích hợp cho không gian tìm kiếm có nhiều cực trị.
-
----
+- **Nhận xét:** Không thích hợp cho không gian tìm kiếm có nhiều cực trị.
 
 #### 3.3.2. Steepest-Ascent Hill Climbing
 
-- **Lý thuyết:**  
-  Là biến thể cải tiến của Simple Hill Climbing, chọn trạng thái tốt nhất trong tất cả trạng thái con.
+- **Lý thuyết:** Là biến thể cải tiến của Simple Hill Climbing, chọn trạng thái tốt nhất trong tất cả trạng thái con.
 
-- **Áp dụng:**  
-  Đánh giá toàn bộ trạng thái lân cận và chọn tốt nhất.
+- **Áp dụng:**  Đánh giá toàn bộ trạng thái lân cận và chọn tốt nhất.
 
-- **Các bước:**  
-  Tương tự Simple Hill Climbing nhưng xét toàn bộ lân cận.
+- **Các bước:**  Tương tự Simple Hill Climbing nhưng xét toàn bộ lân cận.
 
-- **Độ phức tạp:**  
-  Cao hơn Simple Hill Climbing.
+- **Độ phức tạp:** Cao hơn Simple Hill Climbing.
 
-- **Ưu điểm:**  
-  Ít bị kẹt hơn Simple.
+- **Ưu điểm:** Ít bị kẹt hơn Simple.
 
-- **Nhược điểm:**  
-  Vẫn có thể kẹt tại cực trị địa phương.
+- **Nhược điểm:**  Vẫn có thể kẹt tại cực trị địa phương.
 
-- **Link tham khảo:**  
-  [Steepest-Ascent Hill Climbing](https://www.geeksforgeeks.org/steepest-ascent-hill-climbing-in-ai/)
+- **Link tham khảo:** [Steepest-Ascent Hill Climbing](https://www.geeksforgeeks.org/steepest-ascent-hill-climbing-in-ai/)
 
-- **Nhận xét:**  
-  Hiệu quả hơn Simple nhưng chưa khắc phục được nhược điểm lớn.
-
----
+- **Nhận xét:** Hiệu quả hơn Simple nhưng chưa khắc phục được nhược điểm lớn.
 
 #### 3.3.3. Stochastic Hill Climbing
 
-- **Lý thuyết:**  
-  Thay vì chọn trạng thái tốt nhất, chọn ngẫu nhiên một trạng thái tốt hơn.
+- **Lý thuyết:** Thay vì chọn trạng thái tốt nhất, chọn ngẫu nhiên một trạng thái tốt hơn.
 
-- **Áp dụng:**  
-  Giảm khả năng kẹt cực trị địa phương.
+- **Áp dụng:** Giảm khả năng kẹt cực trị địa phương.
 
 - **Các bước:**  
   1. Sinh trạng thái con.  
   2. Chọn ngẫu nhiên một trạng thái con tốt hơn.  
   3. Tiếp tục đến khi không còn cải thiện.
 
-- **Độ phức tạp:**  
-  O(bm)
+- **Độ phức tạp:** O(bm)
 
-- **Ưu điểm:**  
-  Tăng khả năng khám phá.
+- **Ưu điểm:** Tăng khả năng khám phá.
 
-- **Nhược điểm:**  
-  Không đảm bảo tối ưu.
+- **Nhược điểm:** Không đảm bảo tối ưu.
 
-- **Link tham khảo:**  
-  [Stochastic Hill Climbing](https://www.javatpoint.com/ai-stochastic-hill-climbing)
+- **Link tham khảo:** [Stochastic Hill Climbing](https://www.javatpoint.com/ai-stochastic-hill-climbing)
 
-- **Nhận xét:**  
-  Hiệu quả trong không gian tìm kiếm phức tạp.
+- **Nhận xét:** Hiệu quả trong không gian tìm kiếm phức tạp.
 
 ---
 
 #### 3.3.4. Simulated Annealing
 
-- **Lý thuyết:**  
-  Cho phép chọn trạng thái xấu hơn với xác suất giảm dần theo thời gian (temperature).
+- **Lý thuyết:** Cho phép chọn trạng thái xấu hơn với xác suất giảm dần theo thời gian (temperature).
 
-- **Áp dụng:**  
-  Khắc phục tình trạng kẹt cứng tại cực trị.
+- **Áp dụng:** Khắc phục tình trạng kẹt cứng tại cực trị.
 
 - **Các bước:**  
   1. Khởi tạo trạng thái và nhiệt độ.  
@@ -501,31 +404,22 @@ Trong 8-Puzzle, mỗi bước ta xét các trạng thái lân cận bằng cách
   3. Nếu tốt hơn, chấp nhận; nếu xấu hơn, chấp nhận theo xác suất.  
   4. Giảm nhiệt độ dần.
 
-- **Độ phức tạp:**  
-  O(bm)
+- **Độ phức tạp:** O(bm)
 
-- **Ưu điểm:**  
-  Khám phá rộng hơn.
+- **Ưu điểm:** Khám phá rộng hơn.
 
-- **Nhược điểm:**  
-  Thiết lập nhiệt độ không phù hợp dễ gây sai lệch.
+- **Nhược điểm:**  Thiết lập nhiệt độ không phù hợp dễ gây sai lệch.
 
-- **Link tham khảo:**  
-  [Simulated Annealing](https://brilliant.org/wiki/simulated-annealing/)
+- **Link tham khảo:** [Simulated Annealing](https://brilliant.org/wiki/simulated-annealing/)
 
-- **Nhận xét:**  
-  Hiệu quả cho bài toán nhiều cực trị.
-
----
+- **Nhận xét:** Hiệu quả cho bài toán nhiều cực trị.
 
 #### 3.3.5. Genetic Algorithm
 
-- **Lý thuyết:**  
-  Mô phỏng tiến hóa tự nhiên với các bước chọn lọc, lai ghép, đột biến.
+- **Lý thuyết:** Mô phỏng tiến hóa tự nhiên với các bước chọn lọc, lai ghép, đột biến.
 
-- **Áp dụng:**  
-  Mỗi cá thể là một trạng thái 8-Puzzle.
-
+- **Áp dụng:** Mỗi cá thể là một trạng thái 8-Puzzle.
+  
 - **Các bước:**  
   1. Khởi tạo quần thể ngẫu nhiên.  
   2. Đánh giá mức độ phù hợp (fitness).  
@@ -533,30 +427,21 @@ Trong 8-Puzzle, mỗi bước ta xét các trạng thái lân cận bằng cách
   4. Lai ghép và đột biến.  
   5. Lặp lại cho đến khi đạt tiêu chí.
 
-- **Độ phức tạp:**  
-  Phụ thuộc số cá thể và số thế hệ.
+- **Độ phức tạp:** Phụ thuộc số cá thể và số thế hệ.
 
-- **Ưu điểm:**  
-  Khả năng khám phá toàn diện.
+- **Ưu điểm:**  Khả năng khám phá toàn diện.
 
-- **Nhược điểm:**  
-  Không đảm bảo hội tụ, cần hiệu chỉnh tham số.
+- **Nhược điểm:**  Không đảm bảo hội tụ, cần hiệu chỉnh tham số.
 
-- **Link tham khảo:**  
-  [Genetic Algorithm](https://www.tutorialspoint.com/genetic_algorithms/index.htm)
+- **Link tham khảo:** [Genetic Algorithm](https://www.tutorialspoint.com/genetic_algorithms/index.htm)
 
-- **Nhận xét:**  
-  Thích hợp cho tối ưu hóa trạng thái 8-Puzzle phức tạp.
-
----
+- **Nhận xét:** Thích hợp cho tối ưu hóa trạng thái 8-Puzzle phức tạp.
 
 #### 3.3.6. Beam Search
 
-- **Lý thuyết:**  
-  Giới hạn số lượng trạng thái được mở rộng tại mỗi bước.
+- **Lý thuyết:** Giới hạn số lượng trạng thái được mở rộng tại mỗi bước.
 
-- **Áp dụng:**  
-  Duy trì k trạng thái tốt nhất ở mỗi mức độ sâu.
+- **Áp dụng:** Duy trì k trạng thái tốt nhất ở mỗi mức độ sâu.
 
 - **Các bước:**  
   1. Khởi tạo k trạng thái.  
@@ -564,22 +449,15 @@ Trong 8-Puzzle, mỗi bước ta xét các trạng thái lân cận bằng cách
   3. Giữ lại k trạng thái con tốt nhất.  
   4. Lặp lại đến khi đạt mục tiêu.
 
-- **Độ phức tạp:**  
-  Giảm so với tìm kiếm toàn bộ.
+- **Độ phức tạp:** Giảm so với tìm kiếm toàn bộ.
 
-- **Ưu điểm:**  
-  Tiết kiệm bộ nhớ.
+- **Ưu điểm:** Tiết kiệm bộ nhớ.
 
-- **Nhược điểm:**  
-  Dễ bỏ lỡ lời giải tối ưu.
+- **Nhược điểm:** Dễ bỏ lỡ lời giải tối ưu.
 
-- **Link tham khảo:**  
-  [Beam Search](https://www.geeksforgeeks.org/beam-search/)
+- **Link tham khảo:** [Beam Search](https://www.geeksforgeeks.org/beam-search/)
 
-- **Nhận xét:**  
-  Cân bằng giữa hiệu suất và độ chính xác.
-
----
+- **Nhận xét:** Cân bằng giữa hiệu suất và độ chính xác.
 
 #### 3.3.7. Bảng so sánh các thuật toán Local Search
 
@@ -592,10 +470,8 @@ Trong 8-Puzzle, mỗi bước ta xét các trạng thái lân cận bằng cách
 | Genetic Algorithm      | Có     | Cao                    | Dựa trên tiến hóa   |
 | Beam Search           | Có     | Trung bình             | Giới hạn trạng thái |
 
----
 
-**Kết luận:**  
-Simulated Annealing và Genetic Algorithm là hai lựa chọn nổi bật cho bài toán 8-Puzzle khi cần tối ưu hóa và tránh kẹt cực trị địa phương.
+**Kết luận:** Simulated Annealing và Genetic Algorithm là hai lựa chọn nổi bật cho bài toán 8-Puzzle khi cần tối ưu hóa và tránh kẹt cực trị địa phương.
 
 ### 3.4. Tìm kiếm trong môi trường phức tạp (Complex environment search)
 
