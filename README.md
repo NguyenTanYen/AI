@@ -45,7 +45,7 @@
 
 ## 1. PHÂN TÍCH VÀ ĐỀ RA MỤC TIÊU DỰ ÁN
 
-Dự án 8-Puzzle Solver with AI Algorithms hướng đến việc triển khai và so sánh đa dạng các thuật toán trí tuệ nhân tạo nhằm giải quyết bài toán 8-puzzle - một bài toán kinh điển trong lĩnh vực AI và khoa học máy tính.
+Dự án 8-Puzzle Solver with AI Algorithms hướng đến việc triển khai và so sánh đa dạng các thuật toán trí tuệ nhân tạo nhằm giải quyết bài toán 8-Puzzle - một bài toán kinh điển trong lĩnh vực AI và khoa học máy tính.
 
 Cụ thể:
 
