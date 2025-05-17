@@ -1,6 +1,6 @@
 # 8-Puzzle Solver with AI Algorithms
 
-## Mục lục
+## MỤC LỤC
 
 1. [PHÂN TÍCH VÀ ĐỀ RA MỤC TIÊU DỰ ÁN](#1-phân-tích-và-đề-ra-mục-tiêu-dự-án)  
 2. [NỘI DUNG THỰC HIỆN DỰ ÁN](#2-nội-dung-thực-hiện-dự-án)  
@@ -162,8 +162,6 @@ Dự án bao gồm việc triển khai và trình bày toàn diện bài toán 8
 
 - **Nhận xét:** Không phù hợp với bài toán có lời giải sâu hoặc vòng lặp nhiều.
 
----
-
 #### 3.1.3. Uniform Cost Search (UCS)
 
 - **Lý thuyết:** Mở rộng nút theo chi phí nhỏ nhất từ gốc đến hiện tại.
@@ -186,8 +184,6 @@ Dự án bao gồm việc triển khai và trình bày toàn diện bài toán 8
 
 - **Nhận xét:** Lựa chọn tốt nếu chi phí không đều.
 
----
-
 #### 3.1.4. Iterative Deepening Search (IDS)
 
 - **Lý thuyết:** Kết hợp BFS và DFS bằng cách tìm kiếm sâu dần từng mức.
@@ -209,8 +205,6 @@ Dự án bao gồm việc triển khai và trình bày toàn diện bài toán 8
 
 - **Nhận xét:** Phù hợp cho bài toán có không gian lớn và lời giải tối ưu.
 
----
-
 #### 3.1.5. Bảng So sánh các thuật toán Uninformed Search
 
 | Thuật toán | Tối ưu | Bộ nhớ | Độ phức tạp | Ghi chú                    |
@@ -219,8 +213,6 @@ Dự án bao gồm việc triển khai và trình bày toàn diện bài toán 8
 | DFS        | Không   | Thấp   | O(b^m)      | Dễ vào vòng lặp            |
 | UCS        | Có      | Cao    | O(b^d)      | Dùng khi chi phí khác nhau |
 | IDS        | Có      | Trung bình | O(b^d)  | Cân bằng giữa DFS và BFS   |
-
----
 
 **Kết luận:** IDS là lựa chọn cân bằng giữa tối ưu và hiệu quả bộ nhớ cho bài toán 8-Puzzle nếu chi phí đều. Nếu chi phí khác nhau, UCS là thuật toán phù hợp nhất.
 
@@ -234,8 +226,6 @@ Trong bài toán 8-Puzzle, các heuristic thường được sử dụng bao g�
 - Tổng khoảng cách Manhattan giữa mỗi ô và vị trí mục tiêu của nó  
 
 Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các hàm heuristic này để dẫn dắt việc lựa chọn trạng thái tiếp theo cần mở rộng.
-
----
 
 #### 3.2.1. Greedy Best-First Search
 
@@ -258,8 +248,6 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 - **Link tham khảo:** [Greedy Best-First Search](https://www.geeksforgeeks.org/greedy-best-first-search-algorithm/)
 
 - **Nhận xét:** Phù hợp khi thời gian quan trọng hơn độ chính xác lời giải.
-
----
 
 #### 3.2.2. A Search*
 
@@ -286,8 +274,6 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 
 - **Nhận xét:** Là một trong những thuật toán hiệu quả nhất cho 8-Puzzle.
 
----
-
 #### 3.2.3. Iterative Deepening A (IDA)*
 
 - **Lý thuyết:** Là phiên bản của A* dùng tìm kiếm sâu dần theo giới hạn f(n).
@@ -309,8 +295,6 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 
 - **Nhận xét:** Tốt cho bài toán lớn, khi không đủ bộ nhớ cho A*.
 
----
-
 #### 3.2.4. Bảng so sánh các thuật toán Informed Search
 
 | Thuật toán          | Tối ưu | Bộ nhớ | Độ phức tạp | Ghi chú                        |
@@ -318,8 +302,6 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 | Greedy Best-First   | Không   | Trung bình | O(b^m)     | Tập trung mạnh vào mục tiêu    |
 | A* Search           | Có      | Cao      | O(b^d)      | Phổ biến và mạnh mẽ nhất       |
 | IDA*                | Có      | Thấp     | O(b^d)      | Hiệu quả với bài toán lớn      |
-
----
 
 **Kết luận:** A* là thuật toán tốt nhất về độ chính xác và hiệu quả tổng thể trong bài toán 8-Puzzle. Nếu cần tiết kiệm bộ nhớ, nên dùng IDA*.
 
@@ -389,8 +371,6 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 - **Link tham khảo:** [Stochastic Hill Climbing](https://www.javatpoint.com/ai-stochastic-hill-climbing)
 
 - **Nhận xét:** Hiệu quả trong không gian tìm kiếm phức tạp.
-
----
 
 #### 3.3.4. Simulated Annealing
 
@@ -475,133 +455,93 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 
 ### 3.4. Tìm kiếm trong môi trường phức tạp (Complex environment search)
 
-**Định nghĩa lý thuyết:**  
-Tìm kiếm trong môi trường phức tạp đề cập đến các phương pháp tìm kiếm áp dụng cho bài toán có tính không chắc chắn, quan sát không đầy đủ hoặc tồn tại nhiều khả năng dẫn đến các nhánh hành động khác nhau (ví dụ: AND-OR search).
+**Định nghĩa lý thuyết:** Tìm kiếm trong môi trường phức tạp đề cập đến các phương pháp tìm kiếm áp dụng cho bài toán có tính không chắc chắn, quan sát không đầy đủ hoặc tồn tại nhiều khả năng dẫn đến các nhánh hành động khác nhau (ví dụ: AND-OR search).
 
-**Áp dụng vào bài 8-Puzzle:**  
-Dù 8-Puzzle là một môi trường xác định và đầy đủ thông tin, ta vẫn có thể mô phỏng các điều kiện không chắc chắn (ví dụ: bàn cờ không rõ vị trí ban đầu, hành động bị giới hạn) để đánh giá các thuật toán này.
-
----
+**Áp dụng vào bài 8-Puzzle:** Dù 8-Puzzle là một môi trường xác định và đầy đủ thông tin, ta vẫn có thể mô phỏng các điều kiện không chắc chắn (ví dụ: bàn cờ không rõ vị trí ban đầu, hành động bị giới hạn) để đánh giá các thuật toán này.
 
 #### 3.4.1. AND-OR Search Algorithm
 
-- **Lý thuyết:**  
-  Dành cho môi trường không xác định, xây dựng cây AND-OR thể hiện các lựa chọn và hậu quả.
+- **Lý thuyết:** Dành cho môi trường không xác định, xây dựng cây AND-OR thể hiện các lựa chọn và hậu quả.
 
-- **Áp dụng:**  
-  Mô phỏng môi trường không chắc chắn như di chuyển có thể thất bại.
+- **Áp dụng:** Mô phỏng môi trường không chắc chắn như di chuyển có thể thất bại.
 
 - **Các bước:**  
   1. Xây cây trạng thái AND-OR.  
   2. Duyệt theo các nhánh có thể xảy ra (OR) và các nhánh tất yếu (AND).  
   3. Lặp lại cho đến khi toàn bộ cây đạt mục tiêu hoặc không thể giải được.
 
-- **Độ phức tạp:**  
-  Rất cao do phân nhánh mạnh.
+- **Độ phức tạp:** Rất cao do phân nhánh mạnh.
 
-- **Ưu điểm:**  
-  Mô hình hóa tốt tình huống không chắc chắn.
+- **Ưu điểm:** Mô hình hóa tốt tình huống không chắc chắn.
 
-- **Nhược điểm:**  
-  Không phù hợp với 8-Puzzle chuẩn.
+- **Nhược điểm:** Không phù hợp với 8-Puzzle chuẩn.
 
-- **Link tham khảo:**  
-  [AND-OR Graph in AI](https://www.geeksforgeeks.org/and-or-graph-in-ai/)
+- **Link tham khảo:** [AND-OR Graph in AI](https://www.geeksforgeeks.org/and-or-graph-in-ai/)
 
-- **Nhận xét:**  
-  Chủ yếu mang tính lý thuyết trong ngữ cảnh 8-Puzzle.
-
----
+- **Nhận xét:** Chủ yếu mang tính lý thuyết trong ngữ cảnh 8-Puzzle.
 
 #### 3.4.2. Belief State Search
 
-- **Lý thuyết:**  
-  Tìm kiếm với trạng thái niềm tin (tập hợp các trạng thái khả dĩ).
+- **Lý thuyết:** Tìm kiếm với trạng thái niềm tin (tập hợp các trạng thái khả dĩ).
 
-- **Áp dụng:**  
-  Khi không biết rõ trạng thái ban đầu hoặc bị giới hạn trong quan sát.
+- **Áp dụng:** Khi không biết rõ trạng thái ban đầu hoặc bị giới hạn trong quan sát.
 
 - **Các bước:**  
   1. Biểu diễn trạng thái bằng tập hợp trạng thái khả dĩ.  
   2. Cập nhật niềm tin sau mỗi hành động hoặc quan sát.  
   3. Tìm đường đi đến mục tiêu trong không gian trạng thái niềm tin.
 
-- **Độ phức tạp:**  
-  Cao do kích thước trạng thái niềm tin.
+- **Độ phức tạp:**  Cao do kích thước trạng thái niềm tin.
 
-- **Ưu điểm:**  
-  Giải quyết tốt bài toán thiếu thông tin.
+- **Ưu điểm:** Giải quyết tốt bài toán thiếu thông tin.
 
-- **Nhược điểm:**  
-  Khó áp dụng trực tiếp với 8-Puzzle chuẩn.
+- **Nhược điểm:**  Khó áp dụng trực tiếp với 8-Puzzle chuẩn.
 
-- **Link tham khảo:**  
-  [Belief State Search Notes](https://www.cs.cmu.edu/~ggordon/780-f03/notes/belief.pdf)
+- **Link tham khảo:** [Belief State Search Notes](https://www.cs.cmu.edu/~ggordon/780-f03/notes/belief.pdf)
 
-- **Nhận xét:**  
-  Hữu ích trong mô phỏng bài toán ẩn trạng thái.
-
----
+- **Nhận xét:** Hữu ích trong mô phỏng bài toán ẩn trạng thái.
 
 #### 3.4.3. Partially Observable Search
 
-- **Lý thuyết:**  
-  Tìm kiếm trong không gian với thông tin quan sát bị hạn chế.
+- **Lý thuyết:** Tìm kiếm trong không gian với thông tin quan sát bị hạn chế.
 
-- **Áp dụng:**  
-  Khi chỉ biết một phần trạng thái 8-Puzzle (ví dụ: một phần lưới bị che).
+- **Áp dụng:** Khi chỉ biết một phần trạng thái 8-Puzzle (ví dụ: một phần lưới bị che).
 
 - **Các bước:**  
   1. Xây dựng mô hình xác suất của trạng thái thật.  
   2. Cập nhật trạng thái dự đoán từ dữ liệu quan sát.  
   3. Quyết định hành động dựa trên trạng thái dự đoán.
 
-- **Độ phức tạp:**  
-  Cao, yêu cầu mô hình hóa xác suất.
+- **Độ phức tạp:** Cao, yêu cầu mô hình hóa xác suất.
 
-- **Ưu điểm:**  
-  Giải quyết bài toán thực tế với thông tin không đầy đủ.
+- **Ưu điểm:**  Giải quyết bài toán thực tế với thông tin không đầy đủ.
 
-- **Nhược điểm:**  
-  Phức tạp về mặt triển khai và tính toán.
+- **Nhược điểm:** Phức tạp về mặt triển khai và tính toán.
 
-- **Link tham khảo:**  
-  [Partially Observable Search](https://www.cs.ubc.ca/~poole/ci/ch6.pdf)
+- **Link tham khảo:** [Partially Observable Search](https://www.cs.ubc.ca/~poole/ci/ch6.pdf)
 
-- **Nhận xét:**  
-  Mô phỏng phù hợp cho các biến thể nâng cao của 8-Puzzle.
-
----
+- **Nhận xét:** Mô phỏng phù hợp cho các biến thể nâng cao của 8-Puzzle.
 
 #### 3.4.4. No Observation Search
 
-- **Lý thuyết:**  
-  Tìm kiếm mà không có bất kỳ thông tin nào về trạng thái hiện tại sau mỗi hành động.
+- **Lý thuyết:** Tìm kiếm mà không có bất kỳ thông tin nào về trạng thái hiện tại sau mỗi hành động.
 
-- **Áp dụng:**  
-  Mô phỏng trường hợp robot mù không biết vị trí sau mỗi bước di chuyển.
+- **Áp dụng:** Mô phỏng trường hợp robot mù không biết vị trí sau mỗi bước di chuyển.
 
 - **Các bước:**  
   1. Ghi nhớ toàn bộ chuỗi hành động từ đầu.  
   2. Lập kế hoạch hành động không phụ thuộc vào quan sát.  
   3. Sử dụng xác suất để ước lượng trạng thái.
 
-- **Độ phức tạp:**  
-  Cực cao.
+- **Độ phức tạp:** Cực cao.
 
-- **Ưu điểm:**  
-  Áp dụng cho hệ thống không có cảm biến.
+- **Ưu điểm:** Áp dụng cho hệ thống không có cảm biến.
 
-- **Nhược điểm:**  
-  Khó triển khai và không thực tế cho 8-Puzzle chuẩn.
+- **Nhược điểm:** Khó triển khai và không thực tế cho 8-Puzzle chuẩn.
 
-- **Link tham khảo:**  
-  [General Search Algorithms](https://ai.stanford.edu/~nilsson/OnlinePubs-Nils/GeneralSearch.pdf)
+- **Link tham khảo:** [General Search Algorithms](https://ai.stanford.edu/~nilsson/OnlinePubs-Nils/GeneralSearch.pdf)
 
-- **Nhận xét:**  
-  Mang tính học thuật nhiều hơn là ứng dụng thực tế.
-
----
+- **Nhận xét:** Mang tính học thuật nhiều hơn là ứng dụng thực tế.
 
 #### 3.4.5. Bảng So sánh các thuật toán Complex Environment
 
@@ -612,58 +552,41 @@ Dù 8-Puzzle là một môi trường xác định và đầy đủ thông tin, 
 | Partially Observable | Một phần          | Có thể mô phỏng         | Thực tế, sát các bài toán robot | Tốn tài nguyên tính toán  |
 | No Observation     | Không có           | Không phù hợp            | Phù hợp hệ thống mù cảm biến | Gần như không áp dụng được |
 
----
-
 **Kết luận:**  
 Các thuật toán này không phù hợp trực tiếp với 8-Puzzle cổ điển nhưng có thể dùng để mô phỏng bài toán ẩn thông tin hoặc kiểm thử trong môi trường nâng cao.
 
 ### 3.5. Tìm kiếm có điều kiện ràng buộc (Constraint satisfaction problem - CSP)
 
-**Định nghĩa lý thuyết:**  
-CSP là lớp bài toán trong đó lời giải được xác định bằng cách tìm tập giá trị thỏa mãn tập các ràng buộc (constraints) đã cho. Các bài toán CSP điển hình gồm: giải sudoku, tô màu bản đồ, phân công thời khóa biểu...
+**Định nghĩa lý thuyết:** CSP là lớp bài toán trong đó lời giải được xác định bằng cách tìm tập giá trị thỏa mãn tập các ràng buộc (constraints) đã cho. Các bài toán CSP điển hình gồm: giải sudoku, tô màu bản đồ, phân công thời khóa biểu...
 
-**Áp dụng vào bài 8-Puzzle:**  
-8-Puzzle vốn là bài toán theo chuỗi hành động, tuy nhiên có thể mô phỏng thành bài toán CSP bằng cách coi mỗi ô là một biến, mỗi vị trí là một giá trị, và ràng buộc là sự hợp lệ của từng bước di chuyển (chỉ một ô trống, không trùng lặp,...).
-
----
+**Áp dụng vào bài 8-Puzzle:** 8-Puzzle vốn là bài toán theo chuỗi hành động, tuy nhiên có thể mô phỏng thành bài toán CSP bằng cách coi mỗi ô là một biến, mỗi vị trí là một giá trị, và ràng buộc là sự hợp lệ của từng bước di chuyển (chỉ một ô trống, không trùng lặp,...).
 
 #### 3.5.1. Tìm kiếm kiểm thử (Constraint Testing)
 
-- **Lý thuyết:**  
-  Thử các tổ hợp giá trị cho biến và kiểm tra xem có thỏa mãn tất cả ràng buộc hay không.
+- **Lý thuyết:** Thử các tổ hợp giá trị cho biến và kiểm tra xem có thỏa mãn tất cả ràng buộc hay không.
 
-- **Áp dụng:**  
-  Mỗi bước kiểm tra cấu hình bàn cờ hiện tại có thỏa mãn điều kiện của một trạng thái hợp lệ hay không.
+- **Áp dụng:** Mỗi bước kiểm tra cấu hình bàn cờ hiện tại có thỏa mãn điều kiện của một trạng thái hợp lệ hay không.
 
 - **Các bước:**  
   1. Sinh một cấu hình trạng thái.  
   2. Kiểm tra cấu hình đó có trùng giá trị hay sai định dạng không.  
   3. Nếu hợp lệ, giữ lại; nếu không thì loại.
 
-- **Độ phức tạp:**  
-  O(n!) với n là số biến.
+- **Độ phức tạp:** O(n!) với n là số biến.
 
-- **Ưu điểm:**  
-  Đơn giản.
+- **Ưu điểm:** Đơn giản.
 
-- **Nhược điểm:**  
-  Không hiệu quả, không mở rộng được cho bài toán lớn.
+- **Nhược điểm:** Không hiệu quả, không mở rộng được cho bài toán lớn.
 
-- **Link tham khảo:**  
-  [Constraint Satisfaction Problem in AI](https://www.javatpoint.com/constraint-satisfaction-problem-in-ai)
+- **Link tham khảo:** [Constraint Satisfaction Problem in AI](https://www.javatpoint.com/constraint-satisfaction-problem-in-ai)
 
-- **Nhận xét:**  
-  Mang tính nền tảng, chưa tối ưu.
-
----
+- **Nhận xét:** Mang tính nền tảng, chưa tối ưu.
 
 #### 3.5.2. Backtracking CSP
 
-- **Lý thuyết:**  
-  Gán giá trị cho từng biến theo thứ tự, lùi lại khi gặp xung đột.
+- **Lý thuyết:** Gán giá trị cho từng biến theo thứ tự, lùi lại khi gặp xung đột.
 
-- **Áp dụng:**  
-  Gán từng vị trí ô và quay lui khi bàn cờ không hợp lệ.
+- **Áp dụng:** Gán từng vị trí ô và quay lui khi bàn cờ không hợp lệ.
 
 - **Các bước:**  
   1. Chọn một biến chưa gán giá trị.  
@@ -671,52 +594,36 @@ CSP là lớp bài toán trong đó lời giải được xác định bằng c�
   3. Nếu có xung đột thì quay lui, thử giá trị khác.  
   4. Nếu không có xung đột, tiếp tục đến biến kế tiếp.
 
-- **Độ phức tạp:**  
-  O(d^n)
+- **Độ phức tạp:** O(d^n)
 
-- **Ưu điểm:**  
-  Giảm số lượng trạng thái cần kiểm tra.
+- **Ưu điểm:** Giảm số lượng trạng thái cần kiểm tra.
 
-- **Nhược điểm:**  
-  Vẫn chậm nếu không có heuristic hỗ trợ.
+- **Nhược điểm:** Vẫn chậm nếu không có heuristic hỗ trợ.
 
-- **Link tham khảo:**  
-  [Backtracking Algorithm](https://www.geeksforgeeks.org/backtracking-algorithm/)
+- **Link tham khảo:** [Backtracking Algorithm](https://www.geeksforgeeks.org/backtracking-algorithm/)
 
-- **Nhận xét:**  
-  Có thể kết hợp với kiểm thử ràng buộc để nâng cao hiệu quả.
-
----
+- **Nhận xét:** Có thể kết hợp với kiểm thử ràng buộc để nâng cao hiệu quả.
 
 #### 3.5.3. Backtracking kết hợp AC-3 (Arc Consistency 3)
 
-- **Lý thuyết:**  
-  Thuật toán AC-3 được dùng để loại bỏ giá trị không hợp lệ sớm bằng cách duy trì tính nhất quán của ràng buộc nhị phân.
+- **Lý thuyết:** Thuật toán AC-3 được dùng để loại bỏ giá trị không hợp lệ sớm bằng cách duy trì tính nhất quán của ràng buộc nhị phân.
 
-- **Áp dụng:**  
-  Kết hợp với Backtracking để rút gọn miền giá trị trước khi gán.
+- **Áp dụng:** Kết hợp với Backtracking để rút gọn miền giá trị trước khi gán.
 
 - **Các bước:**  
   1. Áp dụng AC-3 để giảm miền giá trị.  
   2. Tiến hành Backtracking trên miền đã thu gọn.  
   3. Nếu xung đột xảy ra, quay lui và thử miền khác.
 
-- **Độ phức tạp:**  
-  AC-3: O(ed^3), tổng hợp: cải thiện đáng kể so với backtracking đơn thuần.
+- **Độ phức tạp:** AC-3: O(ed^3), tổng hợp: cải thiện đáng kể so với backtracking đơn thuần.
 
-- **Ưu điểm:**  
-  Hiệu quả cao hơn, giảm đáng kể không gian tìm kiếm.
+- **Ưu điểm:** Hiệu quả cao hơn, giảm đáng kể không gian tìm kiếm.
 
-- **Nhược điểm:**  
-  Cần cài đặt phức tạp hơn.
+- **Nhược điểm:** Cần cài đặt phức tạp hơn.
 
-- **Link tham khảo:**  
-  [Arc Consistency Algorithm](https://www.geeksforgeeks.org/arc-consistency-algorithm/)
+- **Link tham khảo:** [Arc Consistency Algorithm](https://www.geeksforgeeks.org/arc-consistency-algorithm/)
 
-- **Nhận xét:**  
-  Giải pháp mạnh cho mô hình CSP phức tạp.
-
----
+- **Nhận xét:** Giải pháp mạnh cho mô hình CSP phức tạp.
 
 #### 3.5.4. Bảng So sánh các thuật toán CSP
 
@@ -726,26 +633,17 @@ CSP là lớp bài toán trong đó lời giải được xác định bằng c�
 | Backtracking        | Có            | Có      | Trung bình        | Duyệt có quay lui           |
 | Backtracking + AC-3 | Có            | Có      | Cao                | Rút gọn miền giá trị trước  |
 
----
-
-**Kết luận:**  
-Mặc dù không phải là mô hình chuẩn của 8-Puzzle, việc áp dụng CSP có thể hữu ích trong việc kiểm tra hợp lệ cấu hình đầu vào, sinh trạng thái khởi tạo hoặc thiết kế bài toán biến thể.
+**Kết luận:** Mặc dù không phải là mô hình chuẩn của 8-Puzzle, việc áp dụng CSP có thể hữu ích trong việc kiểm tra hợp lệ cấu hình đầu vào, sinh trạng thái khởi tạo hoặc thiết kế bài toán biến thể.
 
 ### 3.6. Học tăng cường (Reinforcement learning)
 
-**Định nghĩa lý thuyết:**  
-Học tăng cường là một nhánh của học máy, trong đó một tác nhân (agent) học cách hành động trong môi trường để tối đa hóa phần thưởng (reward) dài hạn thông qua quá trình thử - sai. Thuật toán không cần biết trước hành động nào là tốt nhất mà học từ kinh nghiệm tương tác với môi trường.
+**Định nghĩa lý thuyết:** Học tăng cường là một nhánh của học máy, trong đó một tác nhân (agent) học cách hành động trong môi trường để tối đa hóa phần thưởng (reward) dài hạn thông qua quá trình thử - sai. Thuật toán không cần biết trước hành động nào là tốt nhất mà học từ kinh nghiệm tương tác với môi trường.
 
-**Áp dụng vào bài 8-Puzzle:**  
-Mỗi trạng thái của bàn cờ là một trạng thái của môi trường, hành động là di chuyển ô trống, phần thưởng là điểm số (thường gán -1 mỗi bước để khuyến khích tối ưu số bước). Tác nhân học chính sách hành động tốt nhất từ nhiều lần tương tác.
-
----
+**Áp dụng vào bài 8-Puzzle:** Mỗi trạng thái của bàn cờ là một trạng thái của môi trường, hành động là di chuyển ô trống, phần thưởng là điểm số (thường gán -1 mỗi bước để khuyến khích tối ưu số bước). Tác nhân học chính sách hành động tốt nhất từ nhiều lần tương tác.
 
 #### 3.6.1. Q-Learning
 
-- **Lý thuyết:**  
-  Q-learning là thuật toán học tăng cường không mô hình (model-free), học giá trị hành động Q(s, a) thông qua hàm cập nhật:
-
+- **Lý thuyết:** Q-learning là thuật toán học tăng cường không mô hình (model-free), học giá trị hành động Q(s, a) thông qua hàm cập nhật:
   \[
   Q(s, a) \leftarrow Q(s, a) + \alpha \left[r + \gamma \max_{a'} Q(s', a') - Q(s, a)\right]
   \]
@@ -769,20 +667,15 @@ Mỗi trạng thái của bàn cờ là một trạng thái của môi trường
      - Cập nhật giá trị Q theo công thức trên.  
   3. Lặp lại cho đến khi chính sách hội tụ.
 
-- **Độ phức tạp:**  
-  Phụ thuộc vào số trạng thái và số hành động \((|S| \times |A|)\).
+- **Độ phức tạp:** Phụ thuộc vào số trạng thái và số hành động \((|S| \times |A|)\).
 
-- **Ưu điểm:**  
-  Không cần biết trước mô hình môi trường.
+- **Ưu điểm:** Không cần biết trước mô hình môi trường.
 
-- **Nhược điểm:**  
-  Với không gian trạng thái lớn như 8-Puzzle, cần tối ưu hóa (ví dụ: sử dụng Deep Q-Network).
+- **Nhược điểm:** Với không gian trạng thái lớn như 8-Puzzle, cần tối ưu hóa (ví dụ: sử dụng Deep Q-Network).
 
-- **Link tham khảo:**  
-  [Q-learning in Python](https://www.geeksforgeeks.org/q-learning-in-python/)
+- **Link tham khảo:** [Q-learning in Python](https://www.geeksforgeeks.org/q-learning-in-python/)
 
-- **Nhận xét:**  
-  Là cơ sở quan trọng cho các thuật toán học tăng cường hiện đại. Tuy cần nhiều tập dữ liệu và thời gian huấn luyện, Q-learning có thể học được chiến lược giải 8-Puzzle hiệu quả.
+- **Nhận xét:** Là cơ sở quan trọng cho các thuật toán học tăng cường hiện đại. Tuy cần nhiều tập dữ liệu và thời gian huấn luyện, Q-learning có thể học được chiến lược giải 8-Puzzle hiệu quả.
 
 ## Tổng quan nhóm thuật toán và so sánh hiệu quả trên bài toán 8-Puzzle
 
@@ -808,8 +701,6 @@ Mỗi trạng thái của bàn cờ là một trạng thái của môi trường
 | 6. Tìm kiếm có ràng buộc (Constraint Satisfaction) | AC-3                   | O(c * d^3), c: số ràng buộc, d: kích thước miền giá trị | O(c * d^2)               | Loại bỏ giá trị không thỏa mãn sớm              | Phức tạp mô hình hóa, tốn thời gian            | Ít dùng trực tiếp cho 8-Puzzle chuẩn | Hỗ trợ khi mô hình CSP            |
 |                                   | Backtracking           | O(d^n), n số biến, d kích thước miền giá trị | O(n)                     | Đảm bảo tìm lời giải thỏa mãn ràng buộc          | Tốn thời gian khi không gian lớn                 | Dùng để kiểm tra ràng buộc       |                                   |
 
----
-
 ## Nhận xét tổng quan
 
 - Trong nhóm tìm kiếm có thông tin, thuật toán **A\*** là lựa chọn tối ưu nhất cho bài toán 8-Puzzle tiêu chuẩn nhờ cân bằng hiệu quả và tối ưu lời giải.  
@@ -818,6 +709,8 @@ Mỗi trạng thái của bàn cờ là một trạng thái của môi trường
 - Tìm kiếm cục bộ thích hợp khi không gian trạng thái quá lớn hoặc cần lời giải nhanh gần đúng, tuy nhiên không đảm bảo tối ưu và dễ mắc kẹt cực trị cục bộ.  
 - Học củng cố là hướng tiềm năng cho các bài toán phức tạp hơn nhưng đòi hỏi kỹ thuật biểu diễn tốt và thời gian học dài.  
 - Nhóm tìm kiếm trong môi trường không xác định và tìm kiếm có ràng buộc thường ứng dụng trong các biến thể mở rộng hoặc mô hình hóa đặc biệt của bài toán, với chi phí tính toán cao hơn.
+
+---
 
 ## 4. KẾT LUẬN
 
