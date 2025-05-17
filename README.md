@@ -140,6 +140,8 @@ Dự án bao gồm việc triển khai và trình bày toàn diện bài toán 8
 
 - **Nhận xét:** Hữu ích cho bài toán có chi phí đều, nhưng không hiệu quả với độ sâu lớn.
 
+- **Hình ảnh mình họa:**
+
 #### 3.1.2. Depth-First Search (DFS)
 
 - **Lý thuyết:** DFS là chiến lược mở rộng sâu nhất có thể trước khi quay lại.
@@ -162,6 +164,8 @@ Dự án bao gồm việc triển khai và trình bày toàn diện bài toán 8
 
 - **Nhận xét:** Không phù hợp với bài toán có lời giải sâu hoặc vòng lặp nhiều.
 
+- **Hình ảnh mình họa:**
+
 #### 3.1.3. Uniform Cost Search (UCS)
 
 - **Lý thuyết:** Mở rộng nút theo chi phí nhỏ nhất từ gốc đến hiện tại.
@@ -183,6 +187,8 @@ Dự án bao gồm việc triển khai và trình bày toàn diện bài toán 8
 - **Link:** [UCS - Educative](https://www.educative.io/answers/what-is-uniform-cost-search)
 
 - **Nhận xét:** Lựa chọn tốt nếu chi phí không đều.
+- 
+- **Hình ảnh mình họa:**
 
 #### 3.1.4. Iterative Deepening Search (IDS)
 
@@ -204,6 +210,8 @@ Dự án bao gồm việc triển khai và trình bày toàn diện bài toán 8
 - **Link:** [IDS - GeeksforGeeks](https://www.geeksforgeeks.org/iterative-deepening-searchids-iterative-deepening-depth-first-searchiddfs/)
 
 - **Nhận xét:** Phù hợp cho bài toán có không gian lớn và lời giải tối ưu.
+
+- **Hình ảnh mình họa:**
 
 #### 3.1.5. Bảng So sánh các thuật toán Uninformed Search
 
