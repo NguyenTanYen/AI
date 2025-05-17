@@ -645,7 +645,7 @@ Các thuật toán này không phù hợp trực tiếp với 8-Puzzle cổ đi�
 
 - **Lý thuyết:** Q-learning là thuật toán học tăng cường không mô hình (model-free), học giá trị hành động Q(s, a) thông qua hàm cập nhật:
 
- Q(s, a) \leftarrow Q(s, a) + \alpha \left( r + \gamma \max_{a'} Q(s', a') - Q(s, a) \right)
+      Q(s, a) <- Q(s, a) + α * [ r + γ * max_a' Q(s', a') - Q(s, a) ]
 
   Trong đó:  
   - \(\alpha\): tốc độ học  
