@@ -1,4 +1,4 @@
-# 8-Puzzle Solver with AI Algorithms
+# 8-PUZZLE SOLVER WITH AI ALGORITHMS
 
 ## MỤC LỤC
 
@@ -644,6 +644,7 @@ Các thuật toán này không phù hợp trực tiếp với 8-Puzzle cổ đi�
 #### 3.6.1. Q-Learning
 
 - **Lý thuyết:** Q-learning là thuật toán học tăng cường không mô hình (model-free), học giá trị hành động Q(s, a) thông qua hàm cập nhật:
+
   \[
   Q(s, a) \leftarrow Q(s, a) + \alpha \left[r + \gamma \max_{a'} Q(s', a') - Q(s, a)\right]
   \]
@@ -738,5 +739,11 @@ Dự án không chỉ phục vụ mục tiêu học tập và nghiên cứu mà 
 - Tích hợp thêm các thuật toán hiện đại như Deep Q-Learning hoặc Monte Carlo Tree Search.  
 - Đưa ứng dụng lên nền tảng web, thiết bị di động, hoặc làm module tương tác cho giáo dục AI.
 
+---
+## 5. TÁC GIẢ
 
+- Giảng viên hướng dẫn: TS. Phan Thị Huyền Trang
+- Sinh viên thực hiện: Nguyễn Tấn Yên
+- Mã số sinh viên: 23110273
+- Mã lớp học: ARIN330585_04
 
