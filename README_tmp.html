@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<p align="center">
+  </p><h2 align="center">B&#xC1;O C&#xC1;O &#x110;&#x1ED2; &#xC1;N C&#xC1; NH&#xC2;N M&#xD4;N TR&#xCD; TU&#x1EC6; NH&#xC2;N T&#x1EA0;O</h2>
+  <h1 align="center">8-PUZZLE SOLVER WITH AI ALGORITHMS</h1>
+<p></p>
+<p align="center">
+  <strong>Gi&#x1EA3;ng vi&#xEA;n h&#x1B0;&#x1EDB;ng d&#x1EAB;n:</strong> TS. Phan Th&#x1ECB; Huy&#x1EC1;n Trang<br>
+  <strong>Sinh vi&#xEA;n th&#x1EF1;c hi&#x1EC7;n:</strong> Nguy&#x1EC5;n T&#x1EA5;n Y&#xEA;n<br>
+  <strong>M&#xE3; s&#x1ED1; sinh vi&#xEA;n:</strong> 23110273<br>
+  <strong>M&#xE3; l&#x1EDB;p h&#x1ECD;c:</strong> ARIN330585_04
+</p>
+<hr>
+<h2 id="m%E1%BB%A5c-l%E1%BB%A5c">MỤC LỤC</h2>
+<ol>
+<li><a href="#1-ph%C3%A2n-t%C3%ADch-v%C3%A0-%C4%91%E1%BB%81-ra-m%E1%BB%A5c-ti%C3%AAu-d%E1%BB%B1-%C3%A1n">PHÂN TÍCH VÀ ĐỀ RA MỤC TIÊU DỰ ÁN</a></li>
+<li><a href="#2-n%E1%BB%99i-dung-th%E1%BB%B1c-hi%E1%BB%87n-d%E1%BB%B1-%C3%A1n">NỘI DUNG THỰC HIỆN DỰ ÁN</a><br>
+2.1. <a href="#21-b%C3%A0i-to%C3%A1n-8-puzzle">Bài toán 8-puzzle</a><br>
+2.2. <a href="#22-nh%C3%B3m-thu%E1%BA%ADt-to%C3%A1n-tri%E1%BB%83n-khai">Nhóm thuật toán triển khai</a><br>
+2.3. <a href="#23-t%C3%ADch-h%E1%BB%A3p-tr%E1%BB%B1c-quan-h%C3%B3a-visualization">Tích hợp trực quan hóa (Visualization)</a></li>
+<li><a href="#3-c%C3%A1c-thu%E1%BA%ADt-to%C3%A1n-s%E1%BB%AD-d%E1%BB%A5ng">CÁC THUẬT TOÁN SỬ DỤNG</a><br>
+3.1. <a href="#31-t%C3%ACm-ki%E1%BA%BFm-kh%C3%B4ng-th%C3%B4ng-tin-uninformed-search">Tìm kiếm không thông tin (Uninformed search)</a><br>
+   3.1.1. <a href="#311-breadth-first-search-bfs">Breadth-First Search (BFS)</a><br>
+   3.1.2. <a href="#312-depth-first-search-dfs">Depth-First Search (DFS)</a><br>
+   3.1.3. <a href="#313-uniform-cost-search-ucs">Uniform Cost Search (UCS)</a><br>
+   3.1.4. <a href="#314-iterative-deepening-search-ids">Iterative Deepening Search (IDS)</a><br>
+   3.1.5. <a href="#315-b%E1%BA%A3ng-so-s%C3%A1nh-c%C3%A1c-thu%E1%BA%ADt-to%C3%A1n-uninformed-search">Bảng So sánh các thuật toán Uninformed Search</a><br>
+3.2. <a href="#32-t%C3%ACm-ki%E1%BA%BFm-c%C3%B3-th%C3%B4ng-tin-informed-search">Tìm kiếm có thông tin (Informed search)</a><br>
+   3.2.1. <a href="#321-greedy-best-first-search">Greedy Best-First Search</a><br>
+   3.2.2. <a href="#322-a-search">A Search*</a><br>
+   3.2.3. <a href="#323-iterative-deepening-a-ida">Iterative Deepening A (IDA)**</a><br>
+   3.2.4. <a href="#324-b%E1%BA%A3ng-so-s%C3%A1nh-c%C3%A1c-thu%E1%BA%ADt-to%C3%A1n-informed-search">Bảng so sánh các thuật toán Informed Search</a><br>
+3.3. <a href="#33-t%C3%ACm-ki%E1%BA%BFm-c%E1%BB%A5c-b%E1%BB%99-local-search">Tìm kiếm cục bộ (Local search)</a><br>
+   3.3.1. <a href="#331-simple-hill-climbing">Simple Hill Climbing</a><br>
+   3.3.2. <a href="#332-steepest-ascent-hill-climbing">Steepest-Ascent Hill Climbing</a><br>
+   3.3.3. <a href="#333-stochastic-hill-climbing">Stochastic Hill Climbing</a><br>
+   3.3.4. <a href="#334-simulated-annealing">Simulated Annealing</a><br>
+   3.3.5. <a href="#335-genetic-algorithm">Genetic Algorithm</a><br>
+   3.3.6. <a href="#336-beam-search">Beam Search</a><br>
+   3.3.7. <a href="#337-b%E1%BA%A3ng-so-s%C3%A1nh-c%C3%A1c-thu%E1%BA%ADt-to%C3%A1n-local-search">Bảng so sánh các thuật toán Local Search</a><br>
+3.4. <a href="#34-t%C3%ACm-ki%E1%BA%BFm-trong-m%C3%B4i-tr%C6%B0%E1%BB%9Dng-ph%E1%BB%A9c-t%E1%BA%A1p-complex-environment-search">Tìm kiếm trong môi trường phức tạp (Complex environment search)</a><br>
+   3.4.1. <a href="#341-and-or-search-algorithm">AND-OR Search Algorithm</a><br>
+   3.4.2. <a href="#342-belief-state-search">Belief State Search</a><br>
+   3.4.3. <a href="#343-partially-observable-search">Partially Observable Search</a><br>
+   3.4.4. <a href="#344-no-observation-search">No Observation Search</a><br>
+   3.4.5. <a href="#345-b%E1%BA%A3ng-so-s%C3%A1nh-c%C3%A1c-thu%E1%BA%ADt-to%C3%A1n-complex-environment">Bảng So sánh các thuật toán Complex Environment</a><br>
+3.5. <a href="#35-t%C3%ACm-ki%E1%BA%BFm-c%C3%B3-%C4%91i%E1%BB%81u-ki%E1%BB%87n-r%C3%A0ng-bu%E1%BB%99c-constraint-satisfaction-problem---csp">Tìm kiếm có điều kiện ràng buộc (Constraint satisfaction problem - CSP)</a><br>
+   3.5.1. <a href="#351-t%C3%ACm-ki%E1%BA%BFm-ki%E1%BB%83m-th%E1%BB%AD-constraint-testing">Tìm kiếm kiểm thử (Constraint Testing)</a><br>
+   3.5.2. <a href="#352-backtracking-csp">Backtracking CSP</a><br>
+   3.5.3. <a href="#353-backtracking-k%E1%BA%BFt-h%E1%BB%A3p-ac-3-arc-consistency-3">Backtracking kết hợp AC-3 (Arc Consistency 3)</a><br>
+3.6. <a href="#36-h%E1%BB%8Dc-t%C4%83ng-c%C6%B0%E1%BB%9Dng-reinforcement-learning">Học tăng cường (Reinforcement learning)</a><br>
+   3.6.1. <a href="#361-q-learning">Q-Learning</a></li>
+<li><a href="#4-k%E1%BA%BFt-lu%E1%BA%ADn">KẾT LUẬN</a></li>
+<li><a href="#5-video-demo">VIDEO DEMO</a></li>
+</ol>
+<hr>
+<h2 id="1-ph%C3%A2n-t%C3%ADch-v%C3%A0-%C4%91%E1%BB%81-ra-m%E1%BB%A5c-ti%C3%AAu-d%E1%BB%B1-%C3%A1n">1. PHÂN TÍCH VÀ ĐỀ RA MỤC TIÊU DỰ ÁN</h2>
+<p>Dự án 8-Puzzle Solver with AI Algorithms hướng đến việc triển khai và so sánh đa dạng các thuật toán trí tuệ nhân tạo nhằm giải quyết bài toán 8-Puzzle - một bài toán kinh điển trong lĩnh vực AI và khoa học máy tính.</p>
+<p>Cụ thể:</p>
+<ul>
+<li>
+<p>Triển khai các thuật toán AI đa dạng: Tích hợp các nhóm thuật toán tìm kiếm khác nhau bao gồm tìm kiếm không thông tin, tìm kiếm có thông tin, tìm kiếm cục bộ, tìm kiếm trong môi trường phức tạp, tìm kiếm có ràng buộc, và học tăng cường. Việc này giúp người dùng hiểu sâu sắc cơ chế hoạt động và sự khác biệt giữa các phương pháp trong cùng một bài toán cụ thể.</p>
+</li>
+<li>
+<p>Phân tích và so sánh hiệu suất: Đánh giá chi tiết các thuật toán dựa trên các tiêu chí quan trọng như thời gian chạy thực tế, bộ nhớ sử dụng, số bước giải thuật thực hiện, và tính tối ưu của lời giải (chuỗi di chuyển ít bước nhất hoặc chi phí thấp nhất). Kết quả so sánh sẽ làm rõ ưu, nhược điểm cũng như hiệu quả ứng dụng thực tiễn của từng thuật toán.</p>
+</li>
+<li>
+<p>Trực quan hóa kết quả: Xây dựng giao diện đồ họa (GUI) tương tác, thể hiện trực quan quá trình giải bài toán 8-puzzle qua từng bước, giúp người dùng dễ dàng quan sát, so sánh và đánh giá cách thức vận hành cũng như hiệu quả của từng thuật toán thông qua các hoạt ảnh (GIF), biểu đồ hiệu suất và các chỉ số đo lường.</p>
+</li>
+</ul>
+<hr>
+<h2 id="2-n%E1%BB%99i-dung-th%E1%BB%B1c-hi%E1%BB%87n-d%E1%BB%B1-%C3%A1n">2. NỘI DUNG THỰC HIỆN DỰ ÁN</h2>
+<p>Dự án bao gồm việc triển khai và trình bày toàn diện bài toán 8-Puzzle dưới dạng một hệ thống giải thuật AI đa thuật toán với các thành phần và đặc điểm chính như sau:</p>
+<h3 id="21-b%C3%A0i-to%C3%A1n-8-puzzle">2.1. Bài toán 8-Puzzle</h3>
+<ul>
+<li>
+<p><strong>Mô tả</strong>: Bàn cờ gồm 9 ô, trong đó có 8 ô chứa số từ 1 đến 8 và 1 ô trống. Mục tiêu là sắp xếp các ô số theo thứ tự từ 1 đến 8, sao cho ô trống nằm ở vị trí cuối cùng, tạo thành trạng thái mục tiêu.</p>
+</li>
+<li>
+<p><strong>Thành phần bài toán</strong>:</p>
+<ul>
+<li><strong>Trạng thái</strong>: Cấu hình các ô số và ô trống trên bàn cờ tại thời điểm hiện tại.</li>
+<li><strong>Hành động</strong>: Di chuyển ô trống sang trái, phải, lên hoặc xuống, với điều kiện di chuyển hợp lệ (không vượt ra ngoài bàn cờ).</li>
+<li><strong>Kiểm tra mục tiêu</strong>: So sánh trạng thái hiện tại với trạng thái mục tiêu để xác định liệu bài toán đã được giải quyết hay chưa.</li>
+<li><strong>Hàm heuristic</strong>: Ước lượng khoảng cách từ trạng thái hiện tại đến trạng thái mục tiêu, thường dùng các hàm như số ô sai vị trí hoặc khoảng cách Manhattan.</li>
+</ul>
+</li>
+</ul>
+<h3 id="22-nh%C3%B3m-thu%E1%BA%ADt-to%C3%A1n-tri%E1%BB%83n-khai">2.2. Nhóm thuật toán triển khai</h3>
+<ul>
+<li>
+<p><strong>Tìm kiếm không thông tin (Uninformed Search)</strong>: Bao gồm các thuật toán như BFS (Breadth-First Search), DFS (Depth-First Search), UCS (Uniform Cost Search), và IDS (Iterative Deepening Search). Đây là những thuật toán duyệt trạng thái mà không sử dụng thông tin heuristic, thích hợp cho bài toán có kích thước nhỏ, đảm bảo tính đầy đủ và đôi khi đảm bảo tối ưu.</p>
+</li>
+<li>
+<p><strong>Tìm kiếm có thông tin (Informed Search)</strong>: Bao gồm Greedy Best-First Search, A* và IDA* — các thuật toán tận dụng hàm heuristic để tăng tốc độ tìm kiếm và nâng cao chất lượng lời giải, giảm đáng kể không gian trạng thái cần duyệt.</p>
+</li>
+<li>
+<p><strong>Tìm kiếm cục bộ (Local Search)</strong>: Bao gồm các phương pháp Hill Climbing (đơn giản, steepest-ascent, stochastic), Simulated Annealing, Genetic Search và Beam Search. Các thuật toán này ưu tiên cải thiện trạng thái hiện tại theo hướng tối ưu cục bộ, phù hợp với không gian trạng thái lớn và yêu cầu lời giải gần đúng.</p>
+</li>
+<li>
+<p><strong>Tìm kiếm trong môi trường phức tạp (Complex Environment Search)</strong>: Triển khai các thuật toán xử lý môi trường không chắc chắn như AND-OR Search, Partially Observable Search và No Observation Search, giúp giải quyết bài toán trong điều kiện quan sát hạn chế hoặc hành động không chắc chắn.</p>
+</li>
+<li>
+<p><strong>Tìm kiếm có điều kiện ràng buộc (Constraint Satisfaction Problem - CSP)</strong>: Bao gồm Constraint Testing, Backtracking CSP và Backtracking AC-3. Các thuật toán này tập trung xử lý các ràng buộc phức tạp trong bài toán, giúp thu hẹp không gian tìm kiếm hiệu quả, đồng thời kiểm tra tính hợp lệ của các trạng thái.</p>
+</li>
+<li>
+<p><strong>Học tăng cường (Reinforcement Learning)</strong>: Ứng dụng thuật toán Q-Learning để học từ kinh nghiệm và tối ưu chính sách giải quyết bài toán mà không cần mô hình môi trường chính xác.</p>
+</li>
+</ul>
+<h3 id="23-b%E1%BA%A3ng-t%E1%BB%95ng-quan-nh%C3%B3m-thu%E1%BA%ADt-to%C3%A1n">2.3. Bảng tổng quan nhóm thuật toán</h3>
+<table>
+<thead>
+<tr>
+<th>Nhóm Thuật Toán</th>
+<th>Ưu điểm chính</th>
+<th>Nhược điểm chính</th>
+<th>Ứng dụng trong 8-Puzzle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tìm kiếm môi trường không chắc chắn</td>
+<td>Xử lý không chắc chắn, quan sát không đầy đủ</td>
+<td>Phức tạp, tốn tài nguyên</td>
+<td>Ít dùng trong 8-Puzzle chuẩn</td>
+</tr>
+<tr>
+<td>Tìm kiếm cục bộ</td>
+<td>Tiết kiệm bộ nhớ, thực thi nhanh</td>
+<td>Mắc kẹt cực trị cục bộ, không đảm bảo tối ưu</td>
+<td>Tìm lời giải gần đúng khi không gian lớn</td>
+</tr>
+<tr>
+<td>Học củng cố</td>
+<td>Học được chính sách từ dữ liệu thực tế</td>
+<td>Tốn thời gian học, khó mở rộng</td>
+<td>Ứng dụng thử nghiệm, cần tối ưu thuật toán</td>
+</tr>
+<tr>
+<td>Tìm kiếm không thông tin</td>
+<td>Đơn giản, đảm bảo tìm lời giải nếu có</td>
+<td>Tốn bộ nhớ, thời gian khi không gian lớn</td>
+<td>Thích hợp với bài toán nhỏ</td>
+</tr>
+<tr>
+<td>Tìm kiếm có thông tin</td>
+<td>Hiệu quả cao, tối ưu với heuristic tốt</td>
+<td>Phụ thuộc chất lượng heuristic</td>
+<td>Thuật toán tiêu chuẩn của 8-Puzzle</td>
+</tr>
+<tr>
+<td>Tìm kiếm có ràng buộc</td>
+<td>Loại bỏ lựa chọn vô lý, cắt giảm không gian</td>
+<td>Phức tạp mô hình hóa</td>
+<td>Hỗ trợ kiểm tra, CSP ứng dụng hạn chế</td>
+</tr>
+</tbody>
+</table>
+<h3 id="24-t%C3%ADch-h%E1%BB%A3p-tr%E1%BB%B1c-quan-h%C3%B3a-visualization">2.4. Tích hợp trực quan hóa (Visualization)</h3>
+<ul>
+<li>
+<p><strong>Giao diện GUI</strong>:</p>
+<ul>
+<li>Hiển thị rõ ràng trạng thái ban đầu của bàn cờ, quá trình chuyển đổi qua từng bước hành động, và trạng thái mục tiêu cuối cùng.</li>
+<li>Đồ họa bàn cờ với các ô số và ô trống được thiết kế động, cập nhật theo từng bước di chuyển giúp người dùng dễ dàng quan sát.</li>
+<li>Các chỉ số hiệu suất như thời gian chạy, số bước đã thực hiện, số trạng thái đã duyệt cũng được hiển thị trực quan kèm theo.</li>
+</ul>
+</li>
+<li>
+<p><strong>GIF minh họa</strong>:</p>
+<ul>
+<li>Tạo các hình ảnh động thể hiện quá trình giải bài toán 8-Puzzle theo từng thuật toán khác nhau.</li>
+<li>Giúp người dùng dễ dàng so sánh và đánh giá trực quan cách thức vận hành cũng như hiệu quả của từng thuật toán.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="3-c%C3%A1c-thu%E1%BA%ADt-to%C3%A1n-s%E1%BB%AD-d%E1%BB%A5ng">3. CÁC THUẬT TOÁN SỬ DỤNG</h2>
+<h3 id="31-t%C3%ACm-ki%E1%BA%BFm-kh%C3%B4ng-th%C3%B4ng-tin-uninformed-search">3.1. Tìm kiếm không thông tin (Uninformed Search)</h3>
+<p><strong>Định nghĩa lý thuyết:</strong> Tìm kiếm không thông tin (Uninformed Search) là các chiến lược tìm kiếm mà không có kiến thức bổ sung nào về không gian trạng thái ngoài thông tin được cung cấp trong định nghĩa bài toán. Các thuật toán này không sử dụng bất kỳ hàm heuristic nào để định hướng quá trình tìm kiếm mà chỉ dựa vào cấu trúc cây trạng thái và các quy tắc sinh trạng thái kế tiếp.</p>
+<p><strong>Áp dụng vào bài 8-Puzzle:</strong> Trong bài toán 8-Puzzle, trạng thái là cách sắp xếp của các ô số, hành động là việc di chuyển ô trống lên/xuống/trái/phải. Các thuật toán tìm kiếm không thông tin như BFS, DFS, UCS, IDS có thể được sử dụng để tìm lời giải mà không cần biết trước trạng thái nào gần đích hơn, chỉ dựa vào việc duyệt toàn bộ không gian trạng thái một cách có hệ thống.</p>
+<h4 id="311-breadth-first-search-bfs">3.1.1. Breadth-First Search (BFS)</h4>
+<ul>
+<li>
+<p><strong>Lý thuyết:</strong> BFS là chiến lược tìm kiếm theo chiều rộng, mở rộng tất cả các nút ở độ sâu hiện tại trước khi đi sâu hơn.</p>
+</li>
+<li>
+<p><strong>Áp dụng vào 8-Puzzle:</strong> BFS bảo đảm tìm ra lời giải tối ưu nếu chi phí các bước di chuyển là như nhau. Tuy nhiên, dễ gặp tình trạng sử dụng nhiều bộ nhớ.</p>
+</li>
+<li>
+<p><strong>Các bước thực hiện:</strong></p>
+<ol>
+<li>Đưa trạng thái ban đầu vào hàng đợi.</li>
+<li>Lặp lại: lấy trạng thái đầu ra khỏi hàng đợi.</li>
+<li>Kiểm tra nếu là trạng thái đích thì trả về lời giải.</li>
+<li>Tạo các trạng thái con và đưa vào hàng đợi nếu chưa được duyệt.</li>
+</ol>
+</li>
+<li>
+<p><strong>Độ phức tạp:</strong> O(b^d) với b là nhánh trung bình, d là độ sâu.</p>
+</li>
+<li>
+<p><strong>Ưu điểm:</strong>  Tìm được lời giải ngắn nhất.</p>
+</li>
+<li>
+<p><strong>Nhược điểm:</strong> Tốn bộ nhớ, chậm với không gian trạng thái lớn.</p>
+</li>
+<li>
+<p><strong>Link tham khảo:</strong> <a href="https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/">BFS - GeeksforGeeks</a></p>
+</li>
+<li>
+<p><strong>Nhận xét:</strong> Hữu ích cho bài toán có chi phí đều, nhưng không hiệu quả với độ sâu lớn.</p>
+</li>
+<li>
+<p><strong>Hình ảnh minh họa:</strong></p>
+</li>
+</ul>
+<p><img src="https://github.com/NguyenTanYen/AI/raw/main/GIF/1.BFS.gif" alt="BFS Algorithm Animation"></p>
+<h4 id="312-depth-first-search-dfs">3.1.2. Depth-First Search (DFS)</h4>
+<ul>
+<li>
+<p><strong>Lý thuyết:</strong> DFS là chiến lược mở rộng sâu nhất có thể trước khi quay lại.</p>
+</li>
+<li>
+<p><strong>Áp dụng:</strong> DFS ít tốn bộ nhớ hơn BFS nhưng không đảm bảo lời giải ngắn nhất.</p>
+</li>
+<li>
+<p><strong>Các bước:</strong></p>
+<ol>
+<li>Đưa trạng thái đầu vào stack.</li>
+<li>Lặp lại: lấy trạng thái ở đỉnh stack ra.</li>
+<li>Nếu là trạng thái đích, trả về lời giải.</li>
+<li>Đưa các trạng thái con vào stack.</li>
+</ol>
+</li>
+<li>
+<p><strong>Độ phức tạp:</strong> O(b^m) với m là độ sâu tối đa.</p>
+</li>
+<li>
+<p><strong>Ưu điểm:</strong> Ít tốn bộ nhớ.</p>
+</li>
+<li>
+<p><strong>Nhược điểm:</strong> Dễ đi vào vòng lặp, không đảm bảo tối ưu.</p>
+</li>
+<li>
+<p><strong>Link:</strong> <a href="https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/">DFS - GeeksforGeeks</a></p>
+</li>
+<li>
+<p><strong>Nhận xét:</strong> Không phù hợp với bài toán có lời giải sâu hoặc vòng lặp nhiều.</p>
+</li>
+<li>
+<p><strong>Hình ảnh minh họa:</strong></p>
+<p><img src="https://github.com/NguyenTanYen/AI/raw/main/GIF/2.DFS.gif" alt="BFS Algorithm Animation"></p>
+</li>
+</ul>
+<h4 id="313-uniform-cost-search-ucs">3.1.3. Uniform Cost Search (UCS)</h4>
+<ul>
+<li>
+<p><strong>Lý thuyết:</strong> Mở rộng nút theo chi phí nhỏ nhất từ gốc đến hiện tại.</p>
+</li>
+<li>
+<p><strong>Áp dụng:</strong> Tìm lời giải tối ưu, phù hợp với chi phí di chuyển khác nhau.</p>
+</li>
+<li>
+<p><strong>Các bước:</strong></p>
+<ol>
+<li>Đưa trạng thái đầu vào hàng đợi ưu tiên.</li>
+<li>Mỗi bước, lấy trạng thái có chi phí nhỏ nhất.</li>
+<li>Kiểm tra nếu là đích, trả lời giải.</li>
+<li>Thêm các trạng thái con vào hàng đợi với chi phí tương ứng.</li>
+</ol>
+</li>
+<li>
+<p><strong>Độ phức tạp:</strong> O(b^d)</p>
+</li>
+<li>
+<p><strong>Ưu điểm:</strong> Tối ưu.</p>
+</li>
+<li>
+<p><strong>Nhược điểm:</strong> Tốn bộ nhớ.</p>
+</li>
+<li>
+<p><strong>Link:</strong> <a href="https://www.educative.io/answers/what-is-uniform-cost-search">UCS - Educative</a></p>
+</li>
+<li>
+<p><strong>Nhận xét:</strong> Lựa chọn tốt nếu chi phí không đều.</p>
+</li>
+<li>
+<p><strong>Hình ảnh mình họa:</strong></p>
+<p><img src="https://github.com/NguyenTanYen/AI/raw/main/GIF/3.UCS.gif" alt="BFS Algorithm Animation"></p>
+</li>
+</ul>
+<h4 id="314-iterative-deepening-search-ids">3.1.4. Iterative Deepening Search (IDS)</h4>
+<ul>
+<li>
+<p><strong>Lý thuyết:</strong> Kết hợp BFS và DFS bằng cách tìm kiếm sâu dần từng mức.</p>
+</li>
+<li>
+<p><strong>Áp dụng:</strong>  Tối ưu bộ nhớ và đảm bảo tìm lời giải tối ưu.</p>
+</li>
+<li>
+<p><strong>Các bước:</strong></p>
+<ol>
+<li>Chọn giới hạn độ sâu d.</li>
+<li>Thực hiện DFS đến độ sâu d.</li>
+<li>Tăng d và lặp lại nếu chưa tìm thấy lời giải.</li>
+</ol>
+</li>
+<li>
+<p><strong>Độ phức tạp:</strong>  O(b^d), bộ nhớ O(bd).</p>
+</li>
+<li>
+<p><strong>Ưu điểm:</strong>  Giải quyết nhược điểm bộ nhớ của BFS.</p>
+</li>
+<li>
+<p><strong>Nhược điểm:</strong> Tốn thời gian do lặp lại nhiều DFS.</p>
+</li>
+<li>
+<p><strong>Link:</strong> <a href="https://www.geeksforgeeks.org/iterative-deepening-searchids-iterative-deepening-depth-first-searchiddfs/">IDS - GeeksforGeeks</a></p>
+</li>
+<li>
+<p><strong>Nhận xét:</strong> Phù hợp cho bài toán có không gian lớn và lời giải tối ưu.</p>
+</li>
+<li>
+<p><strong>Hình ảnh minh họa:</strong></p>
+<p><img src="https://github.com/NguyenTanYen/AI/raw/main/GIF/4.IDS.gif" alt="BFS Algorithm Animation"></p>
+</li>
+</ul>
+<h4 id="315-b%E1%BA%A3ng-so-s%C3%A1nh-c%C3%A1c-thu%E1%BA%ADt-to%C3%A1n-uninformed-search">3.1.5. Bảng So sánh các thuật toán Uninformed Search</h4>
+<table>
+<thead>
+<tr>
+<th>Thuật toán</th>
+<th>Tối ưu</th>
+<th>Bộ nhớ</th>
+<th>Độ phức tạp</th>
+<th>Ghi chú</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BFS</td>
+<td>Có</td>
+<td>Cao</td>
+<td>O(b^d)</td>
+<td>Tốt khi chi phí đều</td>
+</tr>
+<tr>
+<td>DFS</td>
+<td>Không</td>
+<td>Thấp</td>
+<td>O(b^m)</td>
+<td>Dễ vào vòng lặp</td>
+</tr>
+<tr>
+<td>UCS</td>
+<td>Có</td>
+<td>Cao</td>
+<td>O(b^d)</td>
+<td>Dùng khi chi phí khác nhau</td>
+</tr>
+<tr>
+<td>IDS</td>
+<td>Có</td>
+<td>Trung bình</td>
+<td>O(b^d)</td>
+<td>Cân bằng giữa DFS và BFS</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Kết luận:</strong> IDS là lựa chọn cân bằng giữa tối ưu và hiệu quả bộ nhớ cho bài toán 8-Puzzle nếu chi phí đều. Nếu chi phí khác nhau, UCS là thuật toán phù hợp nhất.</p>
+<h3 id="32-t%C3%ACm-ki%E1%BA%BFm-c%C3%B3-th%C3%B4ng-tin-informed-search">3.2. Tìm kiếm có thông tin (Informed Search)</h3>
+<p><strong>Định nghĩa lý thuyết:</strong> Tìm kiếm có thông tin (Informed Search) là các chiến lược sử dụng kiến thức bổ sung (thường là hàm heuristic) để đánh giá mức độ tiệm cận của trạng thái hiện tại đến trạng thái mục tiêu. Các thuật toán này có khả năng thu hẹp không gian tìm kiếm và tăng tốc độ tìm ra lời giải.</p>
+<p><strong>Áp dụng vào bài 8-Puzzle:</strong><br>
+Trong bài toán 8-Puzzle, các heuristic thường được sử dụng bao gồm:</p>
+<ul>
+<li>Số lượng ô sai vị trí (Misplaced Tiles)</li>
+<li>Tổng khoảng cách Manhattan giữa mỗi ô và vị trí mục tiêu của nó</li>
+</ul>
+<p>Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các hàm heuristic này để dẫn dắt việc lựa chọn trạng thái tiếp theo cần mở rộng.</p>
+<h4 id="321-greedy-best-first-search">3.2.1. Greedy Best-First Search</h4>
+<ul>
+<li>
+<p><strong>Lý thuyết:</strong> Luôn chọn mở rộng trạng thái có giá trị heuristic h(n) nhỏ nhất, tức là trạng thái được cho là gần mục tiêu nhất.</p>
+</li>
+<li>
+<p><strong>Áp dụng:</strong> Tập trung mạnh vào mục tiêu nhưng không đảm bảo lời giải tối ưu.</p>
+</li>
+<li>
+<p><strong>Các bước:</strong></p>
+<ol>
+<li>Đưa trạng thái đầu vào hàng đợi ưu tiên theo h(n).</li>
+<li>Lặp lại: chọn trạng thái có h(n) thấp nhất.</li>
+<li>Kiểm tra trạng thái đích.</li>
+<li>Sinh các trạng thái con và tính h(n), đưa vào hàng đợi.</li>
+</ol>
+</li>
+<li>
+<p><strong>Độ phức tạp:</strong> O(b^m)</p>
+</li>
+<li>
+<p><strong>Ưu điểm:</strong>  Nhanh, đơn giản.</p>
+</li>
+<li>
+<p><strong>Nhược điểm:</strong> Dễ rơi vào ngõ cụt, không đảm bảo tối ưu.</p>
+</li>
+<li>
+<p><strong>Link tham khảo:</strong> <a href="https://www.geeksforgeeks.org/greedy-best-first-search-algorithm/">Greedy Best-First Search</a></p>
+</li>
+<li>
+<p><strong>Nhận xét:</strong> Phù hợp khi thời gian quan trọng hơn độ chính xác lời giải.</p>
+</li>
+<li>
+<p><strong>Hình ảnh minh họa:</strong></p>
+</li>
+</ul>
+<p><img src="https://github.com/NguyenTanYen/AI/raw/main/GIF/5.GREEDY.gif" alt="BFS Algorithm Animation"></p>
+<h4 id="322-a-search">3.2.2. A Search*</h4>
+<ul>
+<li>
+<p><strong>Lý thuyết:</strong><br>
+Dựa vào hàm f(n) = g(n) + h(n), trong đó:</p>
+<ul>
+<li>g(n): chi phí từ trạng thái đầu đến n</li>
+<li>h(n): chi phí ước lượng từ n đến mục tiêu</li>
+</ul>
+</li>
+<li>
+<p><strong>Áp dụng:</strong> Tối ưu và hoàn chỉnh nếu h(n) không đánh giá quá cao (admissible).</p>
+</li>
+<li>
+<p><strong>Các bước:</strong></p>
+<ol>
+<li>Đưa trạng thái đầu vào hàng đợi ưu tiên theo f(n).</li>
+<li>Mỗi bước chọn trạng thái có f(n) nhỏ nhất.</li>
+<li>Kiểm tra trạng thái đích.</li>
+<li>Sinh trạng thái con, tính f(n) và đưa vào hàng đợi.</li>
+</ol>
+</li>
+<li>
+<p><strong>Độ phức tạp:</strong> O(b^d)</p>
+</li>
+<li>
+<p><strong>Ưu điểm:</strong> Tìm được lời giải ngắn nhất.</p>
+</li>
+<li>
+<p><strong>Nhược điểm:</strong> Có thể tốn nhiều bộ nhớ.</p>
+</li>
+<li>
+<p><strong>Link tham khảo:</strong> <a href="https://www.geeksforgeeks.org/a-search-algorithm/">A* Search Algorithm</a></p>
+</li>
+<li>
+<p><strong>Nhận xét:</strong> Là một trong những thuật toán hiệu quả nhất cho 8-Puzzle.</p>
+</li>
+<li>
+<p><strong>Hình ảnh minh họa:</strong></p>
+<p><img src="https://github.com/NguyenTanYen/AI/raw/main/GIF/6.A(SAO).gif" alt="BFS Algorithm Animation"></p>
+</li>
+</ul>
+<h4 id="323-iterative-deepening-a-ida">3.2.3. Iterative Deepening A (IDA)*</h4>
+<ul>
+<li>
+<p><strong>Lý thuyết:</strong> Là phiên bản của A* dùng tìm kiếm sâu dần theo giới hạn f(n).</p>
+</li>
+<li>
+<p><strong>Áp dụng:</strong> Tiết kiệm bộ nhớ so với A*, nhưng vẫn tối ưu.</p>
+</li>
+<li>
+<p><strong>Các bước:</strong></p>
+<ol>
+<li>Thiết lập ngưỡng f(n) ban đầu.</li>
+<li>Thực hiện tìm kiếm theo DFS có ràng buộc f(n).</li>
+<li>Nếu không tìm thấy, tăng ngưỡng f(n) và lặp lại.</li>
+</ol>
+</li>
+<li>
+<p><strong>Độ phức tạp:</strong> O(b^d), bộ nhớ O(d)</p>
+</li>
+<li>
+<p><strong>Ưu điểm:</strong> Tối ưu và tiết kiệm bộ nhớ.</p>
+</li>
+<li>
+<p><strong>Nhược điểm:</strong> Chạy lại nhiều lần.</p>
+</li>
+<li>
+<p><strong>Link tham khảo:</strong> <a href="https://en.wikipedia.org/wiki/Iterative_deepening_A*">Iterative Deepening A* - Wikipedia</a></p>
+</li>
+<li>
+<p><strong>Nhận xét:</strong> Tốt cho bài toán lớn, khi không đủ bộ nhớ cho A*.</p>
+</li>
+<li>
+<p><strong>Hình ảnh minh họa:</strong></p>
+<p><img src="https://github.com/NguyenTanYen/AI/raw/main/GIF/7.IDA(SAO).gif" alt="BFS Algorithm Animation"></p>
+</li>
+</ul>
+<h4 id="324-b%E1%BA%A3ng-so-s%C3%A1nh-c%C3%A1c-thu%E1%BA%ADt-to%C3%A1n-informed-search">3.2.4. Bảng so sánh các thuật toán Informed Search</h4>
+<table>
+<thead>
+<tr>
+<th>Thuật toán</th>
+<th>Tối ưu</th>
+<th>Bộ nhớ</th>
+<th>Độ phức tạp</th>
+<th>Ghi chú</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Greedy Best-First</td>
+<td>Không</td>
+<td>Trung bình</td>
+<td>O(b^m)</td>
+<td>Tập trung mạnh vào mục tiêu</td>
+</tr>
+<tr>
+<td>A* Search</td>
+<td>Có</td>
+<td>Cao</td>
+<td>O(b^d)</td>
+<td>Phổ biến và mạnh mẽ nhất</td>
+</tr>
+<tr>
+<td>IDA*</td>
+<td>Có</td>
+<td>Thấp</td>
+<td>O(b^d)</td>
+<td>Hiệu quả với bài toán lớn</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Kết luận:</strong> A* là thuật toán tốt nhất về độ chính xác và hiệu quả tổng thể trong bài toán 8-Puzzle. Nếu cần tiết kiệm bộ nhớ, nên dùng IDA*.</p>
+<h3 id="33-t%C3%ACm-ki%E1%BA%BFm-c%E1%BB%A5c-b%E1%BB%99-local-search">3.3. Tìm kiếm cục bộ (Local Search)</h3>
+<p><strong>Định nghĩa lý thuyết:</strong> Tìm kiếm cục bộ là chiến lược tìm kiếm cải tiến liên tục dựa trên trạng thái hiện tại, không mở rộng theo cây mà chỉ tập trung vào trạng thái lân cận. Nó đặc biệt phù hợp với các bài toán không cần lời giải đầy đủ mà chỉ cần tối ưu một trạng thái (như 8-Puzzle).</p>
+<p><strong>Áp dụng vào bài 8-Puzzle:</strong> Trong 8-Puzzle, mỗi bước ta xét các trạng thái lân cận bằng cách di chuyển ô trống, sau đó chọn trạng thái tốt nhất theo một tiêu chí đánh giá như heuristic. Các thuật toán như Hill Climbing, Simulated Annealing, Genetic Algorithm,... là đại diện cho hướng tiếp cận này.</p>
+<h4 id="331-simple-hill-climbing">3.3.1. Simple Hill Climbing</h4>
+<ul>
+<li>
+<p><strong>Lý thuyết:</strong> Luôn chọn trạng thái kế tiếp có giá trị đánh giá tốt hơn hiện tại.</p>
+</li>
+<li>
+<p><strong>Áp dụng:</strong> Mỗi bước chọn trạng thái con có h(n) nhỏ hơn.</p>
+</li>
+<li>
+<p><strong>Các bước:</strong></p>
+<ol>
+<li>Khởi tạo trạng thái ban đầu.</li>
+<li>Sinh các trạng thái kế cận.</li>
+<li>Chọn trạng thái tốt hơn hiện tại (nếu có).</li>
+<li>Nếu không có cải thiện, dừng lại.</li>
+</ol>
+</li>
+<li>
+<p><strong>Độ phức tạp:</strong> O(bm)</p>
+</li>
+<li>
+<p><strong>Ưu điểm:</strong>  Đơn giản, nhanh.</p>
+</li>
+<li>
+<p><strong>Nhược điểm:</strong>  Mắc kẹt tại cực trị địa phương.</p>
+</li>
+<li>
+<p><strong>Link tham khảo:</strong> <a href="https://www.javatpoint.com/ai-hill-climbing">Simple Hill Climbing</a></p>
+</li>
+<li>
+<p><strong>Nhận xét:</strong> Không thích hợp cho không gian tìm kiếm có nhiều cực trị.</p>
+</li>
+<li>
+<p><strong>Hình minh họa:</strong></p>
+</li>
+</ul>
+<p><img src="https://github.com/NguyenTanYen/AI/raw/main/GIF/8.SIMPLE%20HILL.gif" alt="BFS Algorithm Animation"></p>
+<h4 id="332-steepest-ascent-hill-climbing">3.3.2. Steepest-Ascent Hill Climbing</h4>
+<ul>
+<li>
+<p><strong>Lý thuyết:</strong> Là biến thể cải tiến của Simple Hill Climbing, chọn trạng thái tốt nhất trong tất cả trạng thái con.</p>
+</li>
+<li>
+<p><strong>Áp dụng:</strong>  Đánh giá toàn bộ trạng thái lân cận và chọn tốt nhất.</p>
+</li>
+<li>
+<p><strong>Các bước:</strong>  Tương tự Simple Hill Climbing nhưng xét toàn bộ lân cận.</p>
+</li>
+<li>
+<p><strong>Độ phức tạp:</strong> Cao hơn Simple Hill Climbing.</p>
+</li>
+<li>
+<p><strong>Ưu điểm:</strong> Ít bị kẹt hơn Simple.</p>
+</li>
+<li>
+<p><strong>Nhược điểm:</strong>  Vẫn có thể kẹt tại cực trị địa phương.</p>
+</li>
+<li>
+<p><strong>Link tham khảo:</strong> <a href="https://www.geeksforgeeks.org/steepest-ascent-hill-climbing-in-ai/">Steepest-Ascent Hill Climbing</a></p>
+</li>
+<li>
+<p><strong>Nhận xét:</strong> Hiệu quả hơn Simple nhưng chưa khắc phục được nhược điểm lớn.</p>
+</li>
+</ul>
+<h4 id="333-stochastic-hill-climbing">3.3.3. Stochastic Hill Climbing</h4>
+<ul>
+<li>
+<p><strong>Lý thuyết:</strong> Thay vì chọn trạng thái tốt nhất, chọn ngẫu nhiên một trạng thái tốt hơn.</p>
+</li>
+<li>
+<p><strong>Áp dụng:</strong> Giảm khả năng kẹt cực trị địa phương.</p>
+</li>
+<li>
+<p><strong>Các bước:</strong></p>
+<ol>
+<li>Sinh trạng thái con.</li>
+<li>Chọn ngẫu nhiên một trạng thái con tốt hơn.</li>
+<li>Tiếp tục đến khi không còn cải thiện.</li>
+</ol>
+</li>
+<li>
+<p><strong>Độ phức tạp:</strong> O(bm)</p>
+</li>
+<li>
+<p><strong>Ưu điểm:</strong> Tăng khả năng khám phá.</p>
+</li>
+<li>
+<p><strong>Nhược điểm:</strong> Không đảm bảo tối ưu.</p>
+</li>
+<li>
+<p><strong>Link tham khảo:</strong> <a href="https://www.javatpoint.com/ai-stochastic-hill-climbing">Stochastic Hill Climbing</a></p>
+</li>
+<li>
+<p><strong>Nhận xét:</strong> Hiệu quả trong không gian tìm kiếm phức tạp.</p>
+<ul>
+<li>
+<p><strong>Hình ảnh minh họa:</strong></p>
+<p><img src="https://github.com/NguyenTanYen/AI/raw/main/GIF/9.STO%20HILL.gif" alt="BFS Algorithm Animation"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="334-simulated-annealing">3.3.4. Simulated Annealing</h4>
+<ul>
+<li>
+<p><strong>Lý thuyết:</strong> Cho phép chọn trạng thái xấu hơn với xác suất giảm dần theo thời gian (temperature).</p>
+</li>
+<li>
+<p><strong>Áp dụng:</strong> Khắc phục tình trạng kẹt cứng tại cực trị.</p>
+</li>
+<li>
+<p><strong>Các bước:</strong></p>
+<ol>
+<li>Khởi tạo trạng thái và nhiệt độ.</li>
+<li>Lặp: chọn ngẫu nhiên trạng thái lân cận.</li>
+<li>Nếu tốt hơn, chấp nhận; nếu xấu hơn, chấp nhận theo xác suất.</li>
+<li>Giảm nhiệt độ dần.</li>
+</ol>
+</li>
+<li>
+<p><strong>Độ phức tạp:</strong> O(bm)</p>
+</li>
+<li>
+<p><strong>Ưu điểm:</strong> Khám phá rộng hơn.</p>
+</li>
+<li>
+<p><strong>Nhược điểm:</strong>  Thiết lập nhiệt độ không phù hợp dễ gây sai lệch.</p>
+</li>
+<li>
+<p><strong>Link tham khảo:</strong> <a href="https://brilliant.org/wiki/simulated-annealing/">Simulated Annealing</a></p>
+</li>
+<li>
+<p><strong>Nhận xét:</strong> Hiệu quả cho bài toán nhiều cực trị.</p>
+</li>
+<li>
+<p><strong>Hình ảnh minh họa:</strong></p>
+<p><img src="https://github.com/NguyenTanYen/AI/raw/main/GIF/10.SIM%20HILL.gif" alt="BFS Algorithm Animation"></p>
+</li>
+</ul>
+<h4 id="335-genetic-algorithm">3.3.5. Genetic Algorithm</h4>
+<ul>
+<li>
+<p><strong>Lý thuyết:</strong> Mô phỏng tiến hóa tự nhiên với các bước chọn lọc, lai ghép, đột biến.</p>
+</li>
+<li>
+<p><strong>Áp dụng:</strong> Mỗi cá thể là một trạng thái 8-Puzzle.</p>
+</li>
+<li>
+<p><strong>Các bước:</strong></p>
+<ol>
+<li>Khởi tạo quần thể ngẫu nhiên.</li>
+<li>Đánh giá mức độ phù hợp (fitness).</li>
+<li>Chọn cá thể tốt.</li>
+<li>Lai ghép và đột biến.</li>
+<li>Lặp lại cho đến khi đạt tiêu chí.</li>
+</ol>
+</li>
+<li>
+<p><strong>Độ phức tạp:</strong> Phụ thuộc số cá thể và số thế hệ.</p>
+</li>
+<li>
+<p><strong>Ưu điểm:</strong>  Khả năng khám phá toàn diện.</p>
+</li>
+<li>
+<p><strong>Nhược điểm:</strong>  Không đảm bảo hội tụ, cần hiệu chỉnh tham số.</p>
+</li>
+<li>
+<p><strong>Link tham khảo:</strong> <a href="https://www.tutorialspoint.com/genetic_algorithms/index.htm">Genetic Algorithm</a></p>
+</li>
+<li>
+<p><strong>Nhận xét:</strong> Thích hợp cho tối ưu hóa trạng thái 8-Puzzle phức tạp.</p>
+</li>
+<li>
+<p><strong>Hình ảnh minh họa:</strong></p>
+<p><img src="https://github.com/NguyenTanYen/AI/raw/main/GIF/12.GEN.gif" alt="BFS Algorithm Animation"></p>
+</li>
+</ul>
+<h4 id="336-beam-search">3.3.6. Beam Search</h4>
+<ul>
+<li>
+<p><strong>Lý thuyết:</strong> Giới hạn số lượng trạng thái được mở rộng tại mỗi bước.</p>
+</li>
+<li>
+<p><strong>Áp dụng:</strong> Duy trì k trạng thái tốt nhất ở mỗi mức độ sâu.</p>
+</li>
+<li>
+<p><strong>Các bước:</strong></p>
+<ol>
+<li>Khởi tạo k trạng thái.</li>
+<li>Mỗi bước sinh trạng thái con từ k trạng thái.</li>
+<li>Giữ lại k trạng thái con tốt nhất.</li>
+<li>Lặp lại đến khi đạt mục tiêu.</li>
+</ol>
+</li>
+<li>
+<p><strong>Độ phức tạp:</strong> Giảm so với tìm kiếm toàn bộ.</p>
+</li>
+<li>
+<p><strong>Ưu điểm:</strong> Tiết kiệm bộ nhớ.</p>
+</li>
+<li>
+<p><strong>Nhược điểm:</strong> Dễ bỏ lỡ lời giải tối ưu.</p>
+</li>
+<li>
+<p><strong>Link tham khảo:</strong> <a href="https://www.geeksforgeeks.org/beam-search/">Beam Search</a></p>
+</li>
+<li>
+<p><strong>Nhận xét:</strong> Cân bằng giữa hiệu suất và độ chính xác.</p>
+</li>
+<li>
+<p><strong>Hình ảnh minh họa:</strong></p>
+<p><img src="https://github.com/NguyenTanYen/AI/raw/main/GIF/11.BEAM.gif" alt="BFS Algorithm Animation"></p>
+</li>
+</ul>
+<h4 id="337-b%E1%BA%A3ng-so-s%C3%A1nh-c%C3%A1c-thu%E1%BA%ADt-to%C3%A1n-local-search">3.3.7. Bảng so sánh các thuật toán Local Search</h4>
+<table>
+<thead>
+<tr>
+<th>Thuật toán</th>
+<th>Tối ưu</th>
+<th>Khả năng tránh cực trị</th>
+<th>Đặc điểm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Simple Hill Climbing</td>
+<td>Không</td>
+<td>Thấp</td>
+<td>Nhanh, đơn giản</td>
+</tr>
+<tr>
+<td>Steepest-Ascent</td>
+<td>Không</td>
+<td>Trung bình</td>
+<td>Tốt hơn Simple</td>
+</tr>
+<tr>
+<td>Stochastic Hill Climbing</td>
+<td>Không</td>
+<td>Trung bình</td>
+<td>Ngẫu nhiên lựa chọn</td>
+</tr>
+<tr>
+<td>Simulated Annealing</td>
+<td>Có</td>
+<td>Cao</td>
+<td>Cân bằng khai phá</td>
+</tr>
+<tr>
+<td>Genetic Algorithm</td>
+<td>Có</td>
+<td>Cao</td>
+<td>Dựa trên tiến hóa</td>
+</tr>
+<tr>
+<td>Beam Search</td>
+<td>Có</td>
+<td>Trung bình</td>
+<td>Giới hạn trạng thái</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Kết luận:</strong> Simulated Annealing và Genetic Algorithm là hai lựa chọn nổi bật cho bài toán 8-Puzzle khi cần tối ưu hóa và tránh kẹt cực trị địa phương.</p>
+<h3 id="34-t%C3%ACm-ki%E1%BA%BFm-trong-m%C3%B4i-tr%C6%B0%E1%BB%9Dng-ph%E1%BB%A9c-t%E1%BA%A1p-complex-environment-search">3.4. Tìm kiếm trong môi trường phức tạp (Complex environment search)</h3>
+<p><strong>Định nghĩa lý thuyết:</strong> Tìm kiếm trong môi trường phức tạp đề cập đến các phương pháp tìm kiếm áp dụng cho bài toán có tính không chắc chắn, quan sát không đầy đủ hoặc tồn tại nhiều khả năng dẫn đến các nhánh hành động khác nhau (ví dụ: AND-OR search).</p>
+<p><strong>Áp dụng vào bài 8-Puzzle:</strong> Dù 8-Puzzle là một môi trường xác định và đầy đủ thông tin, ta vẫn có thể mô phỏng các điều kiện không chắc chắn (ví dụ: bàn cờ không rõ vị trí ban đầu, hành động bị giới hạn) để đánh giá các thuật toán này.</p>
+<h4 id="341-and-or-search-algorithm">3.4.1. AND-OR Search Algorithm</h4>
+<ul>
+<li>
+<p><strong>Lý thuyết:</strong> Dành cho môi trường không xác định, xây dựng cây AND-OR thể hiện các lựa chọn và hậu quả.</p>
+</li>
+<li>
+<p><strong>Áp dụng:</strong> Mô phỏng môi trường không chắc chắn như di chuyển có thể thất bại.</p>
+</li>
+<li>
+<p><strong>Các bước:</strong></p>
+<ol>
+<li>Xây cây trạng thái AND-OR.</li>
+<li>Duyệt theo các nhánh có thể xảy ra (OR) và các nhánh tất yếu (AND).</li>
+<li>Lặp lại cho đến khi toàn bộ cây đạt mục tiêu hoặc không thể giải được.</li>
+</ol>
+</li>
+<li>
+<p><strong>Độ phức tạp:</strong> Rất cao do phân nhánh mạnh.</p>
+</li>
+<li>
+<p><strong>Ưu điểm:</strong> Mô hình hóa tốt tình huống không chắc chắn.</p>
+</li>
+<li>
+<p><strong>Nhược điểm:</strong> Không phù hợp với 8-Puzzle chuẩn.</p>
+</li>
+<li>
+<p><strong>Link tham khảo:</strong> <a href="https://www.geeksforgeeks.org/and-or-graph-in-ai/">AND-OR Graph in AI</a></p>
+</li>
+<li>
+<p><strong>Nhận xét:</strong> Chủ yếu mang tính lý thuyết trong ngữ cảnh 8-Puzzle.</p>
+</li>
+<li>
+<p><strong>Hình ảnh minh họa:</strong></p>
+<p><img src="https://github.com/NguyenTanYen/AI/raw/main/GIF/13.ANDOR.gif" alt="BFS Algorithm Animation"></p>
+</li>
+</ul>
+<h4 id="342-belief-state-search">3.4.2. Belief State Search</h4>
+<ul>
+<li>
+<p><strong>Lý thuyết:</strong> Tìm kiếm với trạng thái niềm tin (tập hợp các trạng thái khả dĩ).</p>
+</li>
+<li>
+<p><strong>Áp dụng:</strong> Khi không biết rõ trạng thái ban đầu hoặc bị giới hạn trong quan sát.</p>
+</li>
+<li>
+<p><strong>Các bước:</strong></p>
+<ol>
+<li>Biểu diễn trạng thái bằng tập hợp trạng thái khả dĩ.</li>
+<li>Cập nhật niềm tin sau mỗi hành động hoặc quan sát.</li>
+<li>Tìm đường đi đến mục tiêu trong không gian trạng thái niềm tin.</li>
+</ol>
+</li>
+<li>
+<p><strong>Độ phức tạp:</strong>  Cao do kích thước trạng thái niềm tin.</p>
+</li>
+<li>
+<p><strong>Ưu điểm:</strong> Giải quyết tốt bài toán thiếu thông tin.</p>
+</li>
+<li>
+<p><strong>Nhược điểm:</strong>  Khó áp dụng trực tiếp với 8-Puzzle chuẩn.</p>
+</li>
+<li>
+<p><strong>Link tham khảo:</strong> <a href="https://www.cs.cmu.edu/~ggordon/780-f03/notes/belief.pdf">Belief State Search Notes</a></p>
+</li>
+<li>
+<p><strong>Nhận xét:</strong> Hữu ích trong mô phỏng bài toán ẩn trạng thái.</p>
+</li>
+</ul>
+<h4 id="343-partially-observable-search">3.4.3. Partially Observable Search</h4>
+<ul>
+<li>
+<p><strong>Lý thuyết:</strong> Tìm kiếm trong không gian với thông tin quan sát bị hạn chế.</p>
+</li>
+<li>
+<p><strong>Áp dụng:</strong> Khi chỉ biết một phần trạng thái 8-Puzzle (ví dụ: một phần lưới bị che).</p>
+</li>
+<li>
+<p><strong>Các bước:</strong></p>
+<ol>
+<li>Xây dựng mô hình xác suất của trạng thái thật.</li>
+<li>Cập nhật trạng thái dự đoán từ dữ liệu quan sát.</li>
+<li>Quyết định hành động dựa trên trạng thái dự đoán.</li>
+</ol>
+</li>
+<li>
+<p><strong>Độ phức tạp:</strong> Cao, yêu cầu mô hình hóa xác suất.</p>
+</li>
+<li>
+<p><strong>Ưu điểm:</strong>  Giải quyết bài toán thực tế với thông tin không đầy đủ.</p>
+</li>
+<li>
+<p><strong>Nhược điểm:</strong> Phức tạp về mặt triển khai và tính toán.</p>
+</li>
+<li>
+<p><strong>Link tham khảo:</strong> <a href="https://www.cs.ubc.ca/~poole/ci/ch6.pdf">Partially Observable Search</a></p>
+</li>
+<li>
+<p><strong>Nhận xét:</strong> Mô phỏng phù hợp cho các biến thể nâng cao của 8-Puzzle.</p>
+</li>
+<li>
+<p><strong>Hình minh họa:</strong></p>
+<p><img src="https://github.com/NguyenTanYen/AI/raw/main/GIF/15.1phan.gif" alt="BFS Algorithm Animation"></p>
+</li>
+</ul>
+<h4 id="344-no-observation-search">3.4.4. No Observation Search</h4>
+<ul>
+<li>
+<p><strong>Lý thuyết:</strong> Tìm kiếm mà không có bất kỳ thông tin nào về trạng thái hiện tại sau mỗi hành động.</p>
+</li>
+<li>
+<p><strong>Áp dụng:</strong> Mô phỏng trường hợp robot mù không biết vị trí sau mỗi bước di chuyển.</p>
+</li>
+<li>
+<p><strong>Các bước:</strong></p>
+<ol>
+<li>Ghi nhớ toàn bộ chuỗi hành động từ đầu.</li>
+<li>Lập kế hoạch hành động không phụ thuộc vào quan sát.</li>
+<li>Sử dụng xác suất để ước lượng trạng thái.</li>
+</ol>
+</li>
+<li>
+<p><strong>Độ phức tạp:</strong> Cực cao.</p>
+</li>
+<li>
+<p><strong>Ưu điểm:</strong> Áp dụng cho hệ thống không có cảm biến.</p>
+</li>
+<li>
+<p><strong>Nhược điểm:</strong> Khó triển khai và không thực tế cho 8-Puzzle chuẩn.</p>
+</li>
+<li>
+<p><strong>Link tham khảo:</strong> <a href="https://ai.stanford.edu/~nilsson/OnlinePubs-Nils/GeneralSearch.pdf">General Search Algorithms</a></p>
+</li>
+<li>
+<p><strong>Nhận xét:</strong> Mang tính học thuật nhiều hơn là ứng dụng thực tế.</p>
+</li>
+</ul>
+<h4 id="345-b%E1%BA%A3ng-so-s%C3%A1nh-c%C3%A1c-thu%E1%BA%ADt-to%C3%A1n-complex-environment">3.4.5. Bảng So sánh các thuật toán Complex Environment</h4>
+<table>
+<thead>
+<tr>
+<th>Thuật toán</th>
+<th>Thông tin quan sát</th>
+<th>Mô phỏng 8-Puzzle chuẩn</th>
+<th>Ưu điểm chính</th>
+<th>Nhược điểm lớn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AND-OR Search</td>
+<td>Không xác định</td>
+<td>Không phù hợp</td>
+<td>Mô hình hóa quyết định phức tạp</td>
+<td>Phân nhánh lớn, khó mở rộng</td>
+</tr>
+<tr>
+<td>Belief State Search</td>
+<td>Một phần</td>
+<td>Hạn chế</td>
+<td>Mô phỏng thiếu thông tin</td>
+<td>Trạng thái niềm tin lớn</td>
+</tr>
+<tr>
+<td>Partially Observable</td>
+<td>Một phần</td>
+<td>Có thể mô phỏng</td>
+<td>Thực tế, sát các bài toán robot</td>
+<td>Tốn tài nguyên tính toán</td>
+</tr>
+<tr>
+<td>No Observation</td>
+<td>Không có</td>
+<td>Không phù hợp</td>
+<td>Phù hợp hệ thống mù cảm biến</td>
+<td>Gần như không áp dụng được</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Kết luận:</strong><br>
+Các thuật toán này không phù hợp trực tiếp với 8-Puzzle cổ điển nhưng có thể dùng để mô phỏng bài toán ẩn thông tin hoặc kiểm thử trong môi trường nâng cao.</p>
+<h3 id="35-t%C3%ACm-ki%E1%BA%BFm-c%C3%B3-%C4%91i%E1%BB%81u-ki%E1%BB%87n-r%C3%A0ng-bu%E1%BB%99c-constraint-satisfaction-problem---csp">3.5. Tìm kiếm có điều kiện ràng buộc (Constraint satisfaction problem - CSP)</h3>
+<p><strong>Định nghĩa lý thuyết:</strong> CSP là lớp bài toán trong đó lời giải được xác định bằng cách tìm tập giá trị thỏa mãn tập các ràng buộc (constraints) đã cho. Các bài toán CSP điển hình gồm: giải sudoku, tô màu bản đồ, phân công thời khóa biểu...</p>
+<p><strong>Áp dụng vào bài 8-Puzzle:</strong> 8-Puzzle vốn là bài toán theo chuỗi hành động, tuy nhiên có thể mô phỏng thành bài toán CSP bằng cách coi mỗi ô là một biến, mỗi vị trí là một giá trị, và ràng buộc là sự hợp lệ của từng bước di chuyển (chỉ một ô trống, không trùng lặp,...).</p>
+<h4 id="351-t%C3%ACm-ki%E1%BA%BFm-ki%E1%BB%83m-th%E1%BB%AD-constraint-testing">3.5.1. Tìm kiếm kiểm thử (Constraint Testing)</h4>
+<ul>
+<li>
+<p><strong>Lý thuyết:</strong> Thử các tổ hợp giá trị cho biến và kiểm tra xem có thỏa mãn tất cả ràng buộc hay không.</p>
+</li>
+<li>
+<p><strong>Áp dụng:</strong> Mỗi bước kiểm tra cấu hình bàn cờ hiện tại có thỏa mãn điều kiện của một trạng thái hợp lệ hay không.</p>
+</li>
+<li>
+<p><strong>Các bước:</strong></p>
+<ol>
+<li>Sinh một cấu hình trạng thái.</li>
+<li>Kiểm tra cấu hình đó có trùng giá trị hay sai định dạng không.</li>
+<li>Nếu hợp lệ, giữ lại; nếu không thì loại.</li>
+</ol>
+</li>
+<li>
+<p><strong>Độ phức tạp:</strong> O(n!) với n là số biến.</p>
+</li>
+<li>
+<p><strong>Ưu điểm:</strong> Đơn giản.</p>
+</li>
+<li>
+<p><strong>Nhược điểm:</strong> Không hiệu quả, không mở rộng được cho bài toán lớn.</p>
+</li>
+<li>
+<p><strong>Link tham khảo:</strong> <a href="https://www.javatpoint.com/constraint-satisfaction-problem-in-ai">Constraint Satisfaction Problem in AI</a></p>
+</li>
+<li>
+<p><strong>Nhận xét:</strong> Mang tính nền tảng, chưa tối ưu.</p>
+</li>
+<li>
+<p><strong>Hình minh họa:</strong></p>
+</li>
+</ul>
+<p><img src="https://github.com/NguyenTanYen/AI/raw/main/GIF/16.Test.gif" alt="BFS Algorithm Animation"></p>
+<h4 id="352-backtracking-csp">3.5.2. Backtracking CSP</h4>
+<ul>
+<li>
+<p><strong>Lý thuyết:</strong> Gán giá trị cho từng biến theo thứ tự, lùi lại khi gặp xung đột.</p>
+</li>
+<li>
+<p><strong>Áp dụng:</strong> Gán từng vị trí ô và quay lui khi bàn cờ không hợp lệ.</p>
+</li>
+<li>
+<p><strong>Các bước:</strong></p>
+<ol>
+<li>Chọn một biến chưa gán giá trị.</li>
+<li>Gán một giá trị khả dĩ.</li>
+<li>Nếu có xung đột thì quay lui, thử giá trị khác.</li>
+<li>Nếu không có xung đột, tiếp tục đến biến kế tiếp.</li>
+</ol>
+</li>
+<li>
+<p><strong>Độ phức tạp:</strong> O(d^n)</p>
+</li>
+<li>
+<p><strong>Ưu điểm:</strong> Giảm số lượng trạng thái cần kiểm tra.</p>
+</li>
+<li>
+<p><strong>Nhược điểm:</strong> Vẫn chậm nếu không có heuristic hỗ trợ.</p>
+</li>
+<li>
+<p><strong>Link tham khảo:</strong> <a href="https://www.geeksforgeeks.org/backtracking-algorithm/">Backtracking Algorithm</a></p>
+</li>
+<li>
+<p><strong>Nhận xét:</strong> Có thể kết hợp với kiểm thử ràng buộc để nâng cao hiệu quả.</p>
+</li>
+<li>
+<p><strong>Hình minh họa:</strong></p>
+<p><img src="https://github.com/NguyenTanYen/AI/raw/main/GIF/17.CSP.gif" alt="BFS Algorithm Animation"></p>
+</li>
+</ul>
+<h4 id="353-backtracking-k%E1%BA%BFt-h%E1%BB%A3p-ac-3-arc-consistency-3">3.5.3. Backtracking kết hợp AC-3 (Arc Consistency 3)</h4>
+<ul>
+<li>
+<p><strong>Lý thuyết:</strong> Thuật toán AC-3 được dùng để loại bỏ giá trị không hợp lệ sớm bằng cách duy trì tính nhất quán của ràng buộc nhị phân.</p>
+</li>
+<li>
+<p><strong>Áp dụng:</strong> Kết hợp với Backtracking để rút gọn miền giá trị trước khi gán.</p>
+</li>
+<li>
+<p><strong>Các bước:</strong></p>
+<ol>
+<li>Áp dụng AC-3 để giảm miền giá trị.</li>
+<li>Tiến hành Backtracking trên miền đã thu gọn.</li>
+<li>Nếu xung đột xảy ra, quay lui và thử miền khác.</li>
+</ol>
+</li>
+<li>
+<p><strong>Độ phức tạp:</strong> AC-3: O(ed^3), tổng hợp: cải thiện đáng kể so với backtracking đơn thuần.</p>
+</li>
+<li>
+<p><strong>Ưu điểm:</strong> Hiệu quả cao hơn, giảm đáng kể không gian tìm kiếm.</p>
+</li>
+<li>
+<p><strong>Nhược điểm:</strong> Cần cài đặt phức tạp hơn.</p>
+</li>
+<li>
+<p><strong>Link tham khảo:</strong> <a href="https://www.geeksforgeeks.org/arc-consistency-algorithm/">Arc Consistency Algorithm</a></p>
+</li>
+<li>
+<p><strong>Nhận xét:</strong> Giải pháp mạnh cho mô hình CSP phức tạp.</p>
+</li>
+<li>
+<p><strong>Hình minh họa:</strong></p>
+<p><img src="https://github.com/NguyenTanYen/AI/raw/main/GIF/18.gif" alt="BFS Algorithm Animation"></p>
+</li>
+</ul>
+<h4 id="354-b%E1%BA%A3ng-so-s%C3%A1nh-c%C3%A1c-thu%E1%BA%ADt-to%C3%A1n-csp">3.5.4. Bảng So sánh các thuật toán CSP</h4>
+<table>
+<thead>
+<tr>
+<th>Thuật toán</th>
+<th>Có hoàn chỉnh</th>
+<th>Tối ưu</th>
+<th>Hiệu quả tìm kiếm</th>
+<th>Đặc điểm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Constraint Testing</td>
+<td>Có</td>
+<td>Không</td>
+<td>Thấp</td>
+<td>Duyệt toàn bộ trạng thái</td>
+</tr>
+<tr>
+<td>Backtracking</td>
+<td>Có</td>
+<td>Có</td>
+<td>Trung bình</td>
+<td>Duyệt có quay lui</td>
+</tr>
+<tr>
+<td>Backtracking + AC-3</td>
+<td>Có</td>
+<td>Có</td>
+<td>Cao</td>
+<td>Rút gọn miền giá trị trước</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Kết luận:</strong> Mặc dù không phải là mô hình chuẩn của 8-Puzzle, việc áp dụng CSP có thể hữu ích trong việc kiểm tra hợp lệ cấu hình đầu vào, sinh trạng thái khởi tạo hoặc thiết kế bài toán biến thể.</p>
+<h3 id="36-h%E1%BB%8Dc-t%C4%83ng-c%C6%B0%E1%BB%9Dng-reinforcement-learning">3.6. Học tăng cường (Reinforcement learning)</h3>
+<p><strong>Định nghĩa lý thuyết:</strong> Học tăng cường là một nhánh của học máy, trong đó một tác nhân (agent) học cách hành động trong môi trường để tối đa hóa phần thưởng (reward) dài hạn thông qua quá trình thử - sai. Thuật toán không cần biết trước hành động nào là tốt nhất mà học từ kinh nghiệm tương tác với môi trường.</p>
+<p><strong>Áp dụng vào bài 8-Puzzle:</strong> Mỗi trạng thái của bàn cờ là một trạng thái của môi trường, hành động là di chuyển ô trống, phần thưởng là điểm số (thường gán -1 mỗi bước để khuyến khích tối ưu số bước). Tác nhân học chính sách hành động tốt nhất từ nhiều lần tương tác.</p>
+<h4 id="361-q-learning">3.6.1. Q-Learning</h4>
+<ul>
+<li>
+<p><strong>Lý thuyết:</strong> Q-learning là thuật toán học tăng cường không mô hình (model-free), học giá trị hành động Q(s, a) thông qua hàm cập nhật:</p>
+<pre><code>Q(s, a) &lt;- Q(s, a) + α * [ r + γ * max_a' Q(s', a') - Q(s, a) ]
+</code></pre>
+</li>
+</ul>
+<p>Trong đó:
+- Q(s, a): giá trị hiện tại của hành động a ở trạng thái s
+- α (alpha): tốc độ học
+- r: phần thưởng nhận được sau khi thực hiện hành động a
+- γ (gamma): hệ số chiết khấu
+- max_a' Q(s', a'): giá trị tối đa của các hành động khả thi ở trạng thái kế tiếp s'</p>
+<ul>
+<li>
+<p><strong>Áp dụng:</strong></p>
+<ul>
+<li>Trạng thái: cấu hình bàn cờ (mã hóa dạng tuple hoặc index).</li>
+<li>Hành động: di chuyển ô trống (trái, phải, lên, xuống).</li>
+<li>Phần thưởng: -1 cho mỗi bước, 0 khi đạt trạng thái đích.</li>
+</ul>
+</li>
+<li>
+<p><strong>Các bước thực hiện:</strong></p>
+<ol>
+<li>Khởi tạo bảng Q cho tất cả cặp trạng thái - hành động.</li>
+<li>Tại mỗi vòng lặp:
+<ul>
+<li>Chọn hành động theo chính sách (\varepsilon)-greedy.</li>
+<li>Thực hiện hành động, quan sát trạng thái mới và phần thưởng.</li>
+<li>Cập nhật giá trị Q theo công thức trên.</li>
+</ul>
+</li>
+<li>Lặp lại cho đến khi chính sách hội tụ.</li>
+</ol>
+</li>
+<li>
+<p><strong>Độ phức tạp:</strong> Phụ thuộc vào số trạng thái và số hành động (|S| × |A|).</p>
+</li>
+<li>
+<p><strong>Ưu điểm:</strong> Không cần biết trước mô hình môi trường.</p>
+</li>
+<li>
+<p><strong>Nhược điểm:</strong> Với không gian trạng thái lớn như 8-Puzzle, cần tối ưu hóa (ví dụ: sử dụng Deep Q-Network).</p>
+</li>
+<li>
+<p><strong>Link tham khảo:</strong> <a href="https://www.geeksforgeeks.org/q-learning-in-python/">Q-learning in Python</a></p>
+</li>
+<li>
+<p><strong>Nhận xét:</strong> Là cơ sở quan trọng cho các thuật toán học tăng cường hiện đại. Tuy cần nhiều tập dữ liệu và thời gian huấn luyện, Q-learning có thể học được chiến lược giải 8-Puzzle hiệu quả.</p>
+</li>
+<li>
+<p><strong>Hình ảnh minh họa:</strong></p>
+<p><img src="https://github.com/NguyenTanYen/AI/raw/main/GIF/14.Q.gif" alt="BFS Algorithm Animation"></p>
+</li>
+</ul>
+<h2 id="nh%E1%BA%ADn-x%C3%A9t-t%E1%BB%95ng-quan">Nhận xét tổng quan</h2>
+<ul>
+<li>Trong nhóm tìm kiếm có thông tin, thuật toán <strong>A*</strong> là lựa chọn tối ưu nhất cho bài toán 8-Puzzle tiêu chuẩn nhờ cân bằng hiệu quả và tối ưu lời giải.</li>
+<li><strong>IDA*</strong> thích hợp khi bộ nhớ bị giới hạn nhưng chấp nhận thời gian dài hơn.</li>
+<li>Các thuật toán trong nhóm tìm kiếm không thông tin như <strong>BFS</strong> và <strong>IDS</strong> đảm bảo tối ưu nhưng hạn chế về bộ nhớ.</li>
+<li>Tìm kiếm cục bộ thích hợp khi không gian trạng thái quá lớn hoặc cần lời giải nhanh gần đúng, tuy nhiên không đảm bảo tối ưu và dễ mắc kẹt cực trị cục bộ.</li>
+<li>Học củng cố là hướng tiềm năng cho các bài toán phức tạp hơn nhưng đòi hỏi kỹ thuật biểu diễn tốt và thời gian học dài.</li>
+<li>Nhóm tìm kiếm trong môi trường không xác định và tìm kiếm có ràng buộc thường ứng dụng trong các biến thể mở rộng hoặc mô hình hóa đặc biệt của bài toán, với chi phí tính toán cao hơn.</li>
+</ul>
+<hr>
+<h2 id="4-k%E1%BA%BFt-lu%E1%BA%ADn">4. KẾT LUẬN</h2>
+<p>Dự án <strong>“8-Puzzle Solver with AI Algorithms”</strong> đã hoàn thành thành công các mục tiêu đề ra: xây dựng một hệ thống giải bài toán 8-Puzzle bằng nhiều thuật toán trí tuệ nhân tạo, đồng thời phân tích, đánh giá và trực quan hóa quá trình hoạt động của từng phương pháp.</p>
+<p>Qua việc triển khai và kiểm thử 6 nhóm thuật toán – từ các chiến lược tìm kiếm truyền thống (BFS, DFS, A*) đến các thuật toán hiện đại như Q-Learning và mô hình hóa ràng buộc – dự án đã chứng minh rằng không tồn tại một thuật toán duy nhất tối ưu cho mọi hoàn cảnh. Mỗi thuật toán có thế mạnh riêng tùy vào mục tiêu cụ thể: tốc độ, bộ nhớ, độ chính xác hay khả năng học hỏi từ môi trường.</p>
+<h3 id="nh%E1%BB%AFng-%C4%91i%E1%BB%83m-n%E1%BB%95i-b%E1%BA%ADt-c%E1%BB%A7a-d%E1%BB%B1-%C3%A1n">Những điểm nổi bật của dự án:</h3>
+<ul>
+<li><strong>Tích hợp đa dạng thuật toán AI:</strong> Cho phép người dùng lựa chọn nhiều chiến lược giải khác nhau trên cùng một bài toán.</li>
+<li><strong>Giao diện trực quan sinh động:</strong> Hiển thị rõ ràng quá trình giải bài toán, hỗ trợ người học và người dùng dễ tiếp cận và quan sát kết quả.</li>
+<li><strong>Bảng so sánh hiệu suất và đánh giá chi tiết:</strong> Giúp làm rõ điểm mạnh, điểm yếu và khả năng ứng dụng thực tiễn của từng phương pháp.</li>
+</ul>
+<h3 id="gi%C3%A1-tr%E1%BB%8B-th%E1%BB%B1c-ti%E1%BB%85n">Giá trị thực tiễn:</h3>
+<p>Dự án không chỉ phục vụ mục tiêu học tập và nghiên cứu mà còn là nền tảng hữu ích cho việc:</p>
+<ul>
+<li>Giảng dạy và minh họa thuật toán AI trong các khóa học tin học và trí tuệ nhân tạo.</li>
+<li>Phát triển các hệ thống giải bài toán logic, tối ưu hóa trạng thái hoặc ra quyết định tự động.</li>
+<li>Là bước đệm để mở rộng sang các dự án AI phức tạp hơn như Rubik Solver, Robot Navigation, hoặc các game chiến thuật AI.</li>
+</ul>
+<h3 id="%C4%91%E1%BB%8Bnh-h%C6%B0%E1%BB%9Bng-ph%C3%A1t-tri%E1%BB%83n-ti%E1%BA%BFp-theo">Định hướng phát triển tiếp theo:</h3>
+<ul>
+<li>Mở rộng bài toán lên 15-Puzzle hoặc các biến thể động.</li>
+<li>Tích hợp thêm các thuật toán hiện đại như Deep Q-Learning hoặc Monte Carlo Tree Search.</li>
+<li>Đưa ứng dụng lên nền tảng web, thiết bị di động, hoặc làm module tương tác cho giáo dục AI.</li>
+</ul>
+<hr>
+<h2 id="5-video-demo">5. VIDEO DEMO</h2>
+<p><a href="https://www.youtube.com/watch?v=DThnyYT705Q">Linh video youtube</a></p>
+<hr>
+
+</body>
+</html>
