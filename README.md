@@ -154,7 +154,7 @@ Dự án bao gồm việc triển khai và trình bày toàn diện bài toán 8
 
 - **Hình ảnh minh họa:**
 
- <img src="https://drive.google.com/uc?export=view&id=1ZiDZbQehbPMuJ8-JQLyK6upT0IBcso5g" />
+ ![BFS Algorithm Animation](https://github.com/NguyenTanYen/AI/raw/main/GIF/1.BFS.gif)
  
 #### 3.1.2. Depth-First Search (DFS)
 
