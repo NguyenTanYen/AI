@@ -800,6 +800,6 @@ Dự án không chỉ phục vụ mục tiêu học tập và nghiên cứu mà 
 
 ---
 ## 5. VIDEO DEMO 
-[Linh video youtube](https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/)
+[Linh video youtube](https://www.youtube.com/watch?v=DThnyYT705Q)
 
 ---
