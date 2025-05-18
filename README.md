@@ -375,7 +375,7 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 
 - **Hình minh họa:**
 
- ![BFS Algorithm Animation](https://github.com/NguyenTanYen/AI/raw/main/GIF/8.SIMPLE%20HILL.gif)
+  ![BFS Algorithm Animation](https://github.com/NguyenTanYen/AI/raw/main/GIF/8.SIMPLE%20HILL.gif)
 
 #### 3.3.2. Steepest-Ascent Hill Climbing
 
@@ -417,7 +417,7 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 - **Nhận xét:** Hiệu quả trong không gian tìm kiếm phức tạp.
 
   - **Hình ảnh minh họa:**
- 
+  
     ![BFS Algorithm Animation](https://github.com/NguyenTanYen/AI/raw/main/GIF/9.STO%20HILL.gif)
 
 #### 3.3.4. Simulated Annealing
@@ -443,7 +443,7 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 - **Nhận xét:** Hiệu quả cho bài toán nhiều cực trị.
 
 - **Hình ảnh minh họa:**
-
+ 
   ![BFS Algorithm Animation](https://github.com/NguyenTanYen/AI/raw/main/GIF/10.SIM%20HILL.gif)
 
 #### 3.3.5. Genetic Algorithm
