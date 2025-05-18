@@ -154,8 +154,8 @@ Dự án bao gồm việc triển khai và trình bày toàn diện bài toán 8
 
 - **Hình ảnh minh họa:**
 
-  <img src="https://drive.google.com/uc?export=view&id=1enMdthuyKCn2QaOOzf_OODS7DsIKlPN-">
-
+ <img src="https://drive.google.com/uc?export=view&id=1ZiDZbQehbPMuJ8-JQLyK6upT0IBcso5g" />
+ 
 #### 3.1.2. Depth-First Search (DFS)
 
 - **Lý thuyết:** DFS là chiến lược mở rộng sâu nhất có thể trước khi quay lại.
@@ -178,7 +178,9 @@ Dự án bao gồm việc triển khai và trình bày toàn diện bài toán 8
 
 - **Nhận xét:** Không phù hợp với bài toán có lời giải sâu hoặc vòng lặp nhiều.
 
-- **Hình ảnh mình họa:**
+- **Hình ảnh minh họa:**
+
+  <img src="https://drive.google.com/uc?export=view&id=16cjlEYYWput3dBxa29sMi1yKUbnLcnO6" />
 
 #### 3.1.3. Uniform Cost Search (UCS)
 
@@ -204,6 +206,8 @@ Dự án bao gồm việc triển khai và trình bày toàn diện bài toán 8
 - 
 - **Hình ảnh mình họa:**
 
+  <img src="https://drive.google.com/uc?export=view&id=1vZhcEZ0L5s1XjwWYjHw2LRr9wWKW5ywc" />
+
 #### 3.1.4. Iterative Deepening Search (IDS)
 
 - **Lý thuyết:** Kết hợp BFS và DFS bằng cách tìm kiếm sâu dần từng mức.
@@ -225,7 +229,9 @@ Dự án bao gồm việc triển khai và trình bày toàn diện bài toán 8
 
 - **Nhận xét:** Phù hợp cho bài toán có không gian lớn và lời giải tối ưu.
 
-- **Hình ảnh mình họa:**
+- **Hình ảnh minh họa:**
+
+  <img src="https://drive.google.com/uc?export=view&id=1NU-zuk3_H5Uyq5GviEPgGyadm7z4vl6n" />
 
 #### 3.1.5. Bảng So sánh các thuật toán Uninformed Search
 
@@ -271,6 +277,10 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 
 - **Nhận xét:** Phù hợp khi thời gian quan trọng hơn độ chính xác lời giải.
 
+- **Hình ảnh minh họa:**
+
+  <img src="https://drive.google.com/uc?export=view&id=1_aTyQRBuOpOz7UkDm4yVKEYGPKyPWtyc" />
+
 #### 3.2.2. A Search*
 
 - **Lý thuyết:**  
@@ -296,6 +306,10 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 
 - **Nhận xét:** Là một trong những thuật toán hiệu quả nhất cho 8-Puzzle.
 
+- **Hình ảnh minh họa:**
+
+  <img src="https://drive.google.com/uc?export=view&id=1d7d-48-s_KzFmV4nQLSV5YYAyJ3guCNF" />
+
 #### 3.2.3. Iterative Deepening A (IDA)*
 
 - **Lý thuyết:** Là phiên bản của A* dùng tìm kiếm sâu dần theo giới hạn f(n).
@@ -316,6 +330,10 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 - **Link tham khảo:** [Iterative Deepening A* - Wikipedia](https://en.wikipedia.org/wiki/Iterative_deepening_A*)
 
 - **Nhận xét:** Tốt cho bài toán lớn, khi không đủ bộ nhớ cho A*.
+
+- **Hình ảnh minh họa:**
+
+  <img src="https://drive.google.com/uc?export=view&id=1u-1ORwQb1Btn1cEExfUjiOl1vQyvQ3XJ" />
 
 #### 3.2.4. Bảng so sánh các thuật toán Informed Search
 
@@ -354,6 +372,10 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 - **Link tham khảo:** [Simple Hill Climbing](https://www.javatpoint.com/ai-hill-climbing)
 
 - **Nhận xét:** Không thích hợp cho không gian tìm kiếm có nhiều cực trị.
+
+- **Hình minh họa:**
+
+  <img src="https://drive.google.com/uc?export=view&id=1QOvmI3T01yzpFCvvug125PEL07Ueozy2" />
 
 #### 3.3.2. Steepest-Ascent Hill Climbing
 
@@ -394,6 +416,10 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 
 - **Nhận xét:** Hiệu quả trong không gian tìm kiếm phức tạp.
 
+  - **Hình ảnh minh họa:**
+ 
+    <img src="https://drive.google.com/uc?export=view&id=1bU3N95TvRZw0TSZbkyEijLQJcoQmxhBv" />
+
 #### 3.3.4. Simulated Annealing
 
 - **Lý thuyết:** Cho phép chọn trạng thái xấu hơn với xác suất giảm dần theo thời gian (temperature).
@@ -415,6 +441,10 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 - **Link tham khảo:** [Simulated Annealing](https://brilliant.org/wiki/simulated-annealing/)
 
 - **Nhận xét:** Hiệu quả cho bài toán nhiều cực trị.
+
+- **Hình ảnh minh họa:**
+
+  <img src="https://drive.google.com/uc?export=view&id=1EMBrr7Ag_MZmtzDQGIQ3JLTlWmgVJLqN" />
 
 #### 3.3.5. Genetic Algorithm
 
@@ -439,6 +469,10 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 
 - **Nhận xét:** Thích hợp cho tối ưu hóa trạng thái 8-Puzzle phức tạp.
 
+- **Hình ảnh minh họa:**
+
+  <img src="https://drive.google.com/uc?export=view&id=186NkxHSl-71_7_0hQcKpkezoKZr2hsX3" />
+
 #### 3.3.6. Beam Search
 
 - **Lý thuyết:** Giới hạn số lượng trạng thái được mở rộng tại mỗi bước.
@@ -460,6 +494,10 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 - **Link tham khảo:** [Beam Search](https://www.geeksforgeeks.org/beam-search/)
 
 - **Nhận xét:** Cân bằng giữa hiệu suất và độ chính xác.
+
+- **Hình ảnh minh họa:**
+
+  <img src="https://drive.google.com/uc?export=view&id=1LLEv7SXK2PW1QMbLLigvvdQ5DA9p0WSz" />
 
 #### 3.3.7. Bảng so sánh các thuật toán Local Search
 
@@ -501,6 +539,10 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 - **Link tham khảo:** [AND-OR Graph in AI](https://www.geeksforgeeks.org/and-or-graph-in-ai/)
 
 - **Nhận xét:** Chủ yếu mang tính lý thuyết trong ngữ cảnh 8-Puzzle.
+
+- **Hình ảnh minh họa:**
+
+  <img src="https://drive.google.com/uc?export=view&id=1enMdthuyKCn2QaOOzf_OODS7DsIKlPN-" />
 
 #### 3.4.2. Belief State Search
 
@@ -698,6 +740,10 @@ Trong đó:
 - **Link tham khảo:** [Q-learning in Python](https://www.geeksforgeeks.org/q-learning-in-python/)
 
 - **Nhận xét:** Là cơ sở quan trọng cho các thuật toán học tăng cường hiện đại. Tuy cần nhiều tập dữ liệu và thời gian huấn luyện, Q-learning có thể học được chiến lược giải 8-Puzzle hiệu quả.
+
+- **Hình ảnh minh họa:**
+
+  <img src="https://drive.google.com/uc?export=view&id=18U0qNHB48yb-7HZlwJ49hHPd_bvYHlVp" />
 
 ## Nhận xét tổng quan
 
