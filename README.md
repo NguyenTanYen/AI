@@ -154,7 +154,7 @@ Dự án bao gồm việc triển khai và trình bày toàn diện bài toán 8
 
 - **Hình ảnh minh họa:**
 
-  <img src="https://drive.google.com/uc?export=view&id=1enMdthuyKCn2QaOOzf_OODS7DsIKlPN-" width="400"/>
+  <img src="https://drive.google.com/uc?export=view&id=1enMdthuyKCn2QaOOzf_OODS7DsIKlPN-">
 
 #### 3.1.2. Depth-First Search (DFS)
 
