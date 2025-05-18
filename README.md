@@ -152,7 +152,9 @@ Dự án bao gồm việc triển khai và trình bày toàn diện bài toán 8
 
 - **Nhận xét:** Hữu ích cho bài toán có chi phí đều, nhưng không hiệu quả với độ sâu lớn.
 
-- **Hình ảnh mình họa:**
+- **Hình ảnh minh họa:**
+
+  <img src="https://drive.google.com/uc?export=view&id=1enMdthuyKCn2QaOOzf_OODS7DsIKlPN-" width="400"/>
 
 #### 3.1.2. Depth-First Search (DFS)
 
