@@ -1,12 +1,16 @@
-# ĐỒ ÁN CÁ NHÂN MÔN TRÍ TUỆ NHÂN TẠO 
+<p align="center">
+  <h2 align="center">ĐỒ ÁN CÁ NHÂN MÔN TRÍ TUỆ NHÂN TẠO</h2>
+  <h1 align="center">8-PUZZLE SOLVER WITH AI ALGORITHMS</h1>
+</p>
 
-8-PUZZLE SOLVER WITH AI ALGORITHMS
+<p align="center">
+  <strong>Giảng viên hướng dẫn:</strong> TS. Phan Thị Huyền Trang<br>
+  <strong>Sinh viên thực hiện:</strong> Nguyễn Tấn Yên<br>
+  <strong>Mã số sinh viên:</strong> 23110273<br>
+  <strong>Mã lớp học:</strong> ARIN330585_04
+</p>
 
-- Giảng viên hướng dẫn: TS. Phan Thị Huyền Trang
-- Sinh viên thực hiện: Nguyễn Tấn Yên
-- Mã số sinh viên: 23110273
-- Mã lớp học: ARIN330585_04
-
+---
 ## MỤC LỤC
 
 1. [PHÂN TÍCH VÀ ĐỀ RA MỤC TIÊU DỰ ÁN](#1-phân-tích-và-đề-ra-mục-tiêu-dự-án)  
