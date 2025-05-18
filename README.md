@@ -586,6 +586,10 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 
 - **Nhận xét:** Mô phỏng phù hợp cho các biến thể nâng cao của 8-Puzzle.
 
+- **Hình minh họa:**
+
+  <img src="https://drive.google.com/uc?export=view&id=1qDI52eAKn1pG0acLLaQ5iUvhXv3NtJY_" />
+
 #### 3.4.4. No Observation Search
 
 - **Lý thuyết:** Tìm kiếm mà không có bất kỳ thông tin nào về trạng thái hiện tại sau mỗi hành động.
@@ -646,6 +650,10 @@ Các thuật toán này không phù hợp trực tiếp với 8-Puzzle cổ đi�
 
 - **Nhận xét:** Mang tính nền tảng, chưa tối ưu.
 
+- **Hình minh họa:**
+
+  <img src="https://drive.google.com/uc?export=view&id=1TVZMd2Wbk7zod95N1TbB59Fau8hfnIZ7" />
+
 #### 3.5.2. Backtracking CSP
 
 - **Lý thuyết:** Gán giá trị cho từng biến theo thứ tự, lùi lại khi gặp xung đột.
@@ -668,6 +676,10 @@ Các thuật toán này không phù hợp trực tiếp với 8-Puzzle cổ đi�
 
 - **Nhận xét:** Có thể kết hợp với kiểm thử ràng buộc để nâng cao hiệu quả.
 
+- **Hình minh họa:**
+
+  <img src="https://drive.google.com/uc?export=view&id=1ZO-MVdaz5iHkh21p_H8EoRcGDzvMEQgq" />
+
 #### 3.5.3. Backtracking kết hợp AC-3 (Arc Consistency 3)
 
 - **Lý thuyết:** Thuật toán AC-3 được dùng để loại bỏ giá trị không hợp lệ sớm bằng cách duy trì tính nhất quán của ràng buộc nhị phân.
@@ -688,6 +700,10 @@ Các thuật toán này không phù hợp trực tiếp với 8-Puzzle cổ đi�
 - **Link tham khảo:** [Arc Consistency Algorithm](https://www.geeksforgeeks.org/arc-consistency-algorithm/)
 
 - **Nhận xét:** Giải pháp mạnh cho mô hình CSP phức tạp.
+
+- **Hình minh họa:**
+
+  <img src="https://drive.google.com/uc?export=view&id=1fngyzKtLSoGemYgnCBTBu-yxG-bC62jZ" />
 
 #### 3.5.4. Bảng So sánh các thuật toán CSP
 
