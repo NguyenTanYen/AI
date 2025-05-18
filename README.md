@@ -51,6 +51,7 @@
    3.6. [Học tăng cường (Reinforcement learning)](#36-học-tăng-cường-reinforcement-learning)  
    &nbsp;&nbsp;&nbsp;3.6.1. [Q-Learning](#361-q-learning)  
 4. [KẾT LUẬN](#4-kết-luận)
+5. [VIDEO DEMO](#5-video-demo)
 
 ---
 
