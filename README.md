@@ -180,7 +180,7 @@ Dự án bao gồm việc triển khai và trình bày toàn diện bài toán 8
 
 - **Hình ảnh minh họa:**
 
-  <p align="center">![BFS Algorithm Animation](https://github.com/NguyenTanYen/AI/raw/main/GIF/2.DFS.gif)
+  ![BFS Algorithm Animation](https://github.com/NguyenTanYen/AI/raw/main/GIF/2.DFS.gif)
 
 #### 3.1.3. Uniform Cost Search (UCS)
 
