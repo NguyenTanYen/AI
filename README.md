@@ -1,5 +1,5 @@
 <p align="center">
-  <h2 align="center">ĐỒ ÁN CÁ NHÂN MÔN TRÍ TUỆ NHÂN TẠO</h2>
+  <h2 align="center">BÁO CÁO ĐỒ ÁN CÁ NHÂN MÔN TRÍ TUỆ NHÂN TẠO</h2>
   <h1 align="center">8-PUZZLE SOLVER WITH AI ALGORITHMS</h1>
 </p>
 
