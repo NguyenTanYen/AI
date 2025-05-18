@@ -180,7 +180,7 @@ Dự án bao gồm việc triển khai và trình bày toàn diện bài toán 8
 
 - **Hình ảnh minh họa:**
 
-  <img src="https://drive.google.com/uc?export=view&id=16cjlEYYWput3dBxa29sMi1yKUbnLcnO6" />
+  ![BFS Algorithm Animation](https://github.com/NguyenTanYen/AI/raw/main/GIF/2.DFS.gif)
 
 #### 3.1.3. Uniform Cost Search (UCS)
 
@@ -206,7 +206,7 @@ Dự án bao gồm việc triển khai và trình bày toàn diện bài toán 8
 - 
 - **Hình ảnh mình họa:**
 
-  <img src="https://drive.google.com/uc?export=view&id=1vZhcEZ0L5s1XjwWYjHw2LRr9wWKW5ywc" />
+  ![BFS Algorithm Animation](https://github.com/NguyenTanYen/AI/raw/main/GIF/3.UCS.gif)
 
 #### 3.1.4. Iterative Deepening Search (IDS)
 
@@ -231,7 +231,7 @@ Dự án bao gồm việc triển khai và trình bày toàn diện bài toán 8
 
 - **Hình ảnh minh họa:**
 
-  <img src="https://drive.google.com/uc?export=view&id=1NU-zuk3_H5Uyq5GviEPgGyadm7z4vl6n" />
+  ![BFS Algorithm Animation](https://github.com/NguyenTanYen/AI/raw/main/GIF/4.IDS.gif)
 
 #### 3.1.5. Bảng So sánh các thuật toán Uninformed Search
 
@@ -279,7 +279,7 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 
 - **Hình ảnh minh họa:**
 
-  <img src="https://drive.google.com/uc?export=view&id=1_aTyQRBuOpOz7UkDm4yVKEYGPKyPWtyc" />
+ ![BFS Algorithm Animation](https://github.com/NguyenTanYen/AI/raw/main/GIF/5.GREEDY.gif)
 
 #### 3.2.2. A Search*
 
@@ -308,7 +308,7 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 
 - **Hình ảnh minh họa:**
 
-  <img src="https://drive.google.com/uc?export=view&id=1d7d-48-s_KzFmV4nQLSV5YYAyJ3guCNF" />
+  ![BFS Algorithm Animation](https://github.com/NguyenTanYen/AI/raw/main/GIF/6.A(SAO).gif)
 
 #### 3.2.3. Iterative Deepening A (IDA)*
 
@@ -333,7 +333,7 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 
 - **Hình ảnh minh họa:**
 
-  <img src="https://drive.google.com/uc?export=view&id=1u-1ORwQb1Btn1cEExfUjiOl1vQyvQ3XJ" />
+  ![BFS Algorithm Animation](https://github.com/NguyenTanYen/AI/raw/main/GIF/7.IDA(SAO).gif)
 
 #### 3.2.4. Bảng so sánh các thuật toán Informed Search
 
@@ -375,7 +375,7 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 
 - **Hình minh họa:**
 
-  <img src="https://drive.google.com/uc?export=view&id=1QOvmI3T01yzpFCvvug125PEL07Ueozy2" />
+ ![BFS Algorithm Animation](https://github.com/NguyenTanYen/AI/raw/main/GIF/8.SIMPLEHILL.gif)
 
 #### 3.3.2. Steepest-Ascent Hill Climbing
 
@@ -418,7 +418,7 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 
   - **Hình ảnh minh họa:**
  
-    <img src="https://drive.google.com/uc?export=view&id=1bU3N95TvRZw0TSZbkyEijLQJcoQmxhBv" />
+    ![BFS Algorithm Animation](https://github.com/NguyenTanYen/AI/raw/main/GIF/9.STO HILL.gif)
 
 #### 3.3.4. Simulated Annealing
 
@@ -444,7 +444,7 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 
 - **Hình ảnh minh họa:**
 
-  <img src="https://drive.google.com/uc?export=view&id=1EMBrr7Ag_MZmtzDQGIQ3JLTlWmgVJLqN" />
+  ![BFS Algorithm Animation](https://github.com/NguyenTanYen/AI/raw/main/GIF/10.SIM HILL.gif)
 
 #### 3.3.5. Genetic Algorithm
 
