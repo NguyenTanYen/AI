@@ -416,9 +416,9 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 
 - **Nhận xét:** Hiệu quả trong không gian tìm kiếm phức tạp.
 
-  - **Hình ảnh minh họa:**
-  
-    ![BFS Algorithm Animation](https://github.com/NguyenTanYen/AI/raw/main/GIF/9.STO%20HILL.gif)
+- **Hình ảnh minh họa:**
+
+  ![BFS Algorithm Animation](https://github.com/NguyenTanYen/AI/raw/main/GIF/9.STO%20HILL.gif)
 
 #### 3.3.4. Simulated Annealing
 
