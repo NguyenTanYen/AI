@@ -203,7 +203,7 @@ Dự án bao gồm việc triển khai và trình bày toàn diện bài toán 8
 - **Link:** [UCS - Educative](https://www.educative.io/answers/what-is-uniform-cost-search)
 
 - **Nhận xét:** Lựa chọn tốt nếu chi phí không đều.
-- 
+  
 - **Hình ảnh mình họa:**
 
   ![BFS Algorithm Animation](https://github.com/NguyenTanYen/AI/raw/main/GIF/3.UCS.gif)
@@ -375,7 +375,7 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 
 - **Hình minh họa:**
 
- ![BFS Algorithm Animation](https://github.com/NguyenTanYen/AI/raw/main/GIF/8.SIMPLEHILL.gif)
+ ![BFS Algorithm Animation](https://github.com/NguyenTanYen/AI/raw/main/GIF/8.SIMPLE%20HILL.gif)
 
 #### 3.3.2. Steepest-Ascent Hill Climbing
 
@@ -418,7 +418,7 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 
   - **Hình ảnh minh họa:**
  
-    ![BFS Algorithm Animation](https://github.com/NguyenTanYen/AI/raw/main/GIF/9.STO HILL.gif)
+    ![BFS Algorithm Animation](https://github.com/NguyenTanYen/AI/raw/main/GIF/9.STO%20HILL.gif)
 
 #### 3.3.4. Simulated Annealing
 
@@ -444,7 +444,7 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 
 - **Hình ảnh minh họa:**
 
-  ![BFS Algorithm Animation](https://github.com/NguyenTanYen/AI/raw/main/GIF/10.SIM HILL.gif)
+  ![BFS Algorithm Animation](https://github.com/NguyenTanYen/AI/raw/main/GIF/10.SIM%20HILL.gif)
 
 #### 3.3.5. Genetic Algorithm
 
@@ -471,7 +471,7 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 
 - **Hình ảnh minh họa:**
 
-  <img src="https://drive.google.com/uc?export=view&id=186NkxHSl-71_7_0hQcKpkezoKZr2hsX3" />
+  ![BFS Algorithm Animation](https://github.com/NguyenTanYen/AI/raw/main/GIF/12.GEN.gif)
 
 #### 3.3.6. Beam Search
 
@@ -497,7 +497,7 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 
 - **Hình ảnh minh họa:**
 
-  <img src="https://drive.google.com/uc?export=view&id=1LLEv7SXK2PW1QMbLLigvvdQ5DA9p0WSz" />
+  ![BFS Algorithm Animation](https://github.com/NguyenTanYen/AI/raw/main/GIF/11.BEAM.gif)
 
 #### 3.3.7. Bảng so sánh các thuật toán Local Search
 
@@ -542,7 +542,7 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 
 - **Hình ảnh minh họa:**
 
-  <img src="https://drive.google.com/uc?export=view&id=1enMdthuyKCn2QaOOzf_OODS7DsIKlPN-" />
+  ![BFS Algorithm Animation](https://github.com/NguyenTanYen/AI/raw/main/GIF/13.ANDOR.gif)
 
 #### 3.4.2. Belief State Search
 
@@ -588,7 +588,7 @@ Các thuật toán như Greedy Best-First Search, A*, và IDA* tận dụng các
 
 - **Hình minh họa:**
 
-  <img src="https://drive.google.com/uc?export=view&id=1qDI52eAKn1pG0acLLaQ5iUvhXv3NtJY_" />
+  ![BFS Algorithm Animation](https://github.com/NguyenTanYen/AI/raw/main/GIF/15.1phan.gif)
 
 #### 3.4.4. No Observation Search
 
@@ -652,7 +652,7 @@ Các thuật toán này không phù hợp trực tiếp với 8-Puzzle cổ đi�
 
 - **Hình minh họa:**
 
-  <img src="https://drive.google.com/uc?export=view&id=1TVZMd2Wbk7zod95N1TbB59Fau8hfnIZ7" />
+ ![BFS Algorithm Animation](https://github.com/NguyenTanYen/AI/raw/main/GIF/16.Test.gif)
 
 #### 3.5.2. Backtracking CSP
 
@@ -678,7 +678,7 @@ Các thuật toán này không phù hợp trực tiếp với 8-Puzzle cổ đi�
 
 - **Hình minh họa:**
 
-  <img src="https://drive.google.com/uc?export=view&id=1ZO-MVdaz5iHkh21p_H8EoRcGDzvMEQgq" />
+  ![BFS Algorithm Animation](https://github.com/NguyenTanYen/AI/raw/main/GIF/17.CSP.gif)
 
 #### 3.5.3. Backtracking kết hợp AC-3 (Arc Consistency 3)
 
@@ -703,7 +703,7 @@ Các thuật toán này không phù hợp trực tiếp với 8-Puzzle cổ đi�
 
 - **Hình minh họa:**
 
-  <img src="https://drive.google.com/uc?export=view&id=1fngyzKtLSoGemYgnCBTBu-yxG-bC62jZ" />
+  ![BFS Algorithm Animation](https://github.com/NguyenTanYen/AI/raw/main/GIF/18.gif)
 
 #### 3.5.4. Bảng So sánh các thuật toán CSP
 
@@ -759,7 +759,7 @@ Trong đó:
 
 - **Hình ảnh minh họa:**
 
-  <img src="https://drive.google.com/uc?export=view&id=18U0qNHB48yb-7HZlwJ49hHPd_bvYHlVp" />
+  ![BFS Algorithm Animation](https://github.com/NguyenTanYen/AI/raw/main/GIF/14.Q.gif)
 
 ## Nhận xét tổng quan
 
