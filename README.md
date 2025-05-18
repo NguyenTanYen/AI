@@ -1,4 +1,11 @@
-# 8-PUZZLE SOLVER WITH AI ALGORITHMS
+# ĐỒ ÁN CÁ NHÂN MÔN TRÍ TUỆ NHÂN TẠO 
+
+8-PUZZLE SOLVER WITH AI ALGORITHMS
+
+- Giảng viên hướng dẫn: TS. Phan Thị Huyền Trang
+- Sinh viên thực hiện: Nguyễn Tấn Yên
+- Mã số sinh viên: 23110273
+- Mã lớp học: ARIN330585_04
 
 ## MỤC LỤC
 
@@ -723,11 +730,8 @@ Dự án không chỉ phục vụ mục tiêu học tập và nghiên cứu mà 
 - Đưa ứng dụng lên nền tảng web, thiết bị di động, hoặc làm module tương tác cho giáo dục AI.
 
 ---
-## 5. TÁC GIẢ
+## 5. VIDEO DEMO
 
-- Giảng viên hướng dẫn: TS. Phan Thị Huyền Trang
-- Sinh viên thực hiện: Nguyễn Tấn Yên
-- Mã số sinh viên: 23110273
-- Mã lớp học: ARIN330585_04
+
 
 ---
